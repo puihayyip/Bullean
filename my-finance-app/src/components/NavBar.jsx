@@ -13,10 +13,19 @@ function NavBar() {
     <>
       <nav className="navbar">
         <div className="container">
-          <h1 className="logo">Logo</h1>
+          <div className="header">
+            <h1 className="logoText">Bullean</h1>
+            <p>Seeking The Truth</p>
+          </div>
+          <img
+            className="logoImg"
+            src="https://cdn-icons-png.flaticon.com/512/1606/1606571.png"
+            // taken from https://www.flaticon.com/free-icon/bull_1606608?term=bull&related_id=1606608
+            alt=""
+          />
           <ul className="navlinks">
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">Watchlist</Link>
             </li>
             <li>
               <Link to="/Search">Search</Link>

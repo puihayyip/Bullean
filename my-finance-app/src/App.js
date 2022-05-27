@@ -1,8 +1,9 @@
 import "./App.css";
-import HomePage from "./components/HomePage";
+import Watchlist from "./components/Watchlist";
 import Search from "./components/Search";
 import About from "./components/About";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 import {
   Route,
   Link,
@@ -18,10 +19,11 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<Watchlist />} />
           <Route path="/About" element={<About />} />
           <Route path="/Search" element={<Search />} />
         </Routes>
+        {/* <Footer /> */}
       </BrowserRouter>
     </div>
   );
