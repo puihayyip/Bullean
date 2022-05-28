@@ -5,7 +5,8 @@
 }
 
 .navbar {
-  background-color: rgb(21, 21, 48);
+  /* background-color: rgb(21, 21, 48); */
+  background-color: rgb(14, 18, 29);
 }
 
 a {
@@ -63,7 +64,7 @@ a {
 }
 
 .bodyContent {
-  margin: 0 15%;
+  margin: 0 10%;
 }
 
 footer {

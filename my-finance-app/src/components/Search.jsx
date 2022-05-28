@@ -2,37 +2,28 @@ import React, { useState, useEffect } from "react";
 import searchResults from "../sampleAPIs/SearchEndpoint.json";
 import Cards from "./Cards";
 import LoadingScreen from "./LoadingScreen";
+import CompanyOverview from "./CompanyOverview";
 
 function Search() {
   const APIKEY = process.env.REACT_APP_APIKEY;
   const [search, setSearch] = useState("");
   const [result, setResult] = useState({ bestMatches: [] });
   const [loading, setLoading] = useState("");
+  const [ticker, setTicker] = useState("");
 
-  //Actual API call
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   async function fetchData() {
-    try {
-      const url = `https://www.alphavantage.co/query?apikey=${APIKEY}&function=SYMBOL_SEARCH&datatype=json&keywords=${search}`;
-      const res = await fetch(url);
-      const data = await res.json();
-      setResult(data);
-      setLoading("ran");
-    } catch (error) {
-      alert(error);
-    }
+    const url = `https://www.alphavantage.co/query?apikey=${APIKEY}&function=SYMBOL_SEARCH&datatype=json&keywords=${search}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    setResult(data);
+    setLoading("ran");
   }
-
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   const handleSubmit = (e) => {
     e.preventDefault();
     e.target[0].value = "";
-    fetchData();
     setLoading("loading");
+    fetchData();
   };
 
   if (loading === "loading") {
@@ -52,7 +43,13 @@ function Search() {
         />
         <button type="submit">Submit</button>
       </form>
-      <Cards result={result} />
+      <br />
+      <div style={{ display: "flex", gap: "2%" }}>
+        <div style={{ flexBasis: "40%" }}>
+          <Cards result={result} setTicker={setTicker} />
+        </div>
+        <CompanyOverview ticker={ticker} />
+      </div>
     </div>
   );
 }

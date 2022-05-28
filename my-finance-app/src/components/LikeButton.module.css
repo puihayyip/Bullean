@@ -1,0 +1,12 @@
+.container {
+  margin: auto 0;
+}
+
+.shape {
+  font-size: 25px;
+}
+
+.shape:hover {
+  color: red;
+  cursor: pointer;
+}
