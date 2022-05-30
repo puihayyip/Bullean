@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import styles from "./LikeButton.module.css";
 import { likedListContext } from "../App";
-import { IoIosHeartEmpty, IoIosHeart } from "react-icons/io";
 
 function LikeButton({ ticker }) {
   const [like, setLike] = useState(true);
@@ -20,7 +19,7 @@ function LikeButton({ ticker }) {
   const handleClick = (e) => {
     if (like) {
       e.target.style.color = "red";
-      e.target.innerHTML = "&#9829;";
+      e.target.innerHTML = "&#x2764;";
       setLikedList([...likedList, e.target.id]);
     } else {
       e.target.style.color = "black";
@@ -41,8 +40,7 @@ function LikeButton({ ticker }) {
               handleClick(e);
             }}
           >
-            &#9829;
-            {/* <IoIosHeartEmpty /> */}
+            &#x2764;
           </div>
         ) : (
           <div
@@ -53,7 +51,6 @@ function LikeButton({ ticker }) {
             }}
           >
             &#9825;
-            {/* <IoIosHeartEmpty /> */}
           </div>
         )}
       </div>

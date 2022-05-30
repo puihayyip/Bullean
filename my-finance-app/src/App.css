@@ -3,6 +3,10 @@ body {
   font-size: 20px;
 }
 
+svg {
+  cursor: pointer;
+}
+
 .App {
   box-sizing: border-box;
   margin: 0;

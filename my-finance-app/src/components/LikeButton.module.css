@@ -6,7 +6,7 @@
   font-size: 25px;
 }
 
-.shape:hover {
+.shape :hover {
   color: red;
   cursor: pointer;
 }
