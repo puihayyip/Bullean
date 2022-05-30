@@ -25,10 +25,10 @@ function NavBar() {
           />
           <ul className="navlinks">
             <li>
-              <Link to="/watchlist">Watchlist</Link>
+              <Link to="/">Watchlist</Link>
             </li>
             <li>
-              <Link to="/">Search</Link>
+              <Link to="/search">Search</Link>
             </li>
             <li>
               <Link to="/About">About</Link>

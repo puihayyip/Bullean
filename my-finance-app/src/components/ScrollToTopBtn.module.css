@@ -1,9 +1,9 @@
 .scrollBtn {
-  align-self: end;
   font-size: 1.3rem;
   width: 2rem;
   height: 2rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0 1rem 22%;
+  /* margin-left: 22%; */
 }
 
 .scrollBtn:hover {
@@ -13,4 +13,8 @@
 
 .scrollBtn:active {
   color: rgb(119, 119, 119);
+}
+
+.hidden {
+  display: none;
 }

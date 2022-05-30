@@ -3,6 +3,7 @@ import searchResults from "../sampleAPIs/SearchEndpoint.json";
 import Cards from "./Cards";
 import LoadingScreen from "./LoadingScreen";
 import CompanyOverview from "./CompanyOverview";
+import ScrollToTopBtn from "./ScrollToTopBtn";
 
 function Search() {
   const APIKEY = process.env.REACT_APP_APIKEY;
@@ -44,14 +45,16 @@ function Search() {
         <button type="submit">Submit</button>
       </form>
       <br />
-      <div style={{ display: "flex", gap: "2%" }}>
+      <div style={{ display: "flex", gap: "2%", alignItems: "flex-start" }}>
         <div
           style={{ flexBasis: "40%", display: "flex", flexDirection: "column" }}
+          id="cards"
         >
           <Cards result={result} setTicker={setTicker} />
         </div>
         <CompanyOverview ticker={ticker} setTicker={setTicker} />
       </div>
+      <ScrollToTopBtn />
     </div>
   );
 }

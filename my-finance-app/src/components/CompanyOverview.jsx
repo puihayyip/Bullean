@@ -3,8 +3,7 @@ import LoadingScreen from "./LoadingScreen";
 import overviewData from "../sampleAPIs/CompanyOverview.json";
 import styles from "./Cards.module.css";
 import LikeButton from "./LikeButton";
-import Details from "./Details";
-// import ScrollToTopBtn from "./ScrollToTopBtn";
+import DetailsParent from "./CompanyDetails/DetailsParent";
 
 function CompanyOverview({ ticker, setTicker }) {
   // const APIKEY = process.env.REACT_APP_APIKEY;
@@ -80,6 +79,7 @@ function CompanyOverview({ ticker, setTicker }) {
       <>
         <div
           className={styles.card}
+          id="companyOverview"
           style={{ flexBasis: "58%", fontSize: "1rem" }}
         >
           <div className={styles.container}>
@@ -105,7 +105,7 @@ function CompanyOverview({ ticker, setTicker }) {
               </div>
 
               <div>{arr}</div>
-              <Details />
+              <DetailsParent ticker={ticker} />
             </div>
           </div>
         </div>

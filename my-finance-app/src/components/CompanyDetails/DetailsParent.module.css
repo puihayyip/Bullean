@@ -4,6 +4,7 @@
   /* width: fit-content; */
   gap: 10px;
   align-items: center;
+  height: 25px;
 }
 
 .details__btn {

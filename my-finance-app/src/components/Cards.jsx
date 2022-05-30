@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Cards.module.css";
-import ScrollToTopBtn from "./ScrollToTopBtn";
 
 function Cards({ result, setTicker }) {
   const handleClick = (e) => {
@@ -60,12 +59,7 @@ function Cards({ result, setTicker }) {
     }
   }
 
-  return (
-    <>
-      {outerArr}
-      <ScrollToTopBtn />
-    </>
-  );
+  return <>{outerArr}</>;
 }
 
 export default Cards;

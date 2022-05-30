@@ -19,10 +19,12 @@ function LikeButton({ ticker }) {
   const handleClick = (e) => {
     if (like) {
       e.target.style.color = "red";
+      e.target.style.fontSize = "18px";
       e.target.innerHTML = "&#x2764;";
       setLikedList([...likedList, e.target.id]);
     } else {
       e.target.style.color = "black";
+      e.target.style.fontSize = "24px";
       e.target.innerHTML = "&#9825;";
       setLikedList(likedList.filter((companies) => companies !== ticker));
     }
