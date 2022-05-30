@@ -45,10 +45,12 @@ function Search() {
       </form>
       <br />
       <div style={{ display: "flex", gap: "2%" }}>
-        <div style={{ flexBasis: "40%" }}>
+        <div
+          style={{ flexBasis: "40%", display: "flex", flexDirection: "column" }}
+        >
           <Cards result={result} setTicker={setTicker} />
         </div>
-        <CompanyOverview ticker={ticker} />
+        <CompanyOverview ticker={ticker} setTicker={setTicker} />
       </div>
     </div>
   );

@@ -1,0 +1,16 @@
+.scrollBtn {
+  align-self: end;
+  font-size: 1.3rem;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.scrollBtn:hover {
+  color: rgb(93, 93, 93);
+  cursor: pointer;
+}
+
+.scrollBtn:active {
+  color: rgb(119, 119, 119);
+}

@@ -1,0 +1,18 @@
+.details__container {
+  display: flex;
+  cursor: pointer;
+  /* width: fit-content; */
+  gap: 10px;
+  align-items: center;
+}
+
+.details__btn {
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+
+.details__btn__rotate {
+  cursor: pointer;
+  transition: all 0.1s linear;
+  transform: rotate(90deg);
+}

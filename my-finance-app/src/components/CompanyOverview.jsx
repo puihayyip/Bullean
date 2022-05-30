@@ -3,12 +3,13 @@ import LoadingScreen from "./LoadingScreen";
 import overviewData from "../sampleAPIs/CompanyOverview.json";
 import styles from "./Cards.module.css";
 import LikeButton from "./LikeButton";
+import Details from "./Details";
+// import ScrollToTopBtn from "./ScrollToTopBtn";
 
-function CompanyOverview({ ticker }) {
+function CompanyOverview({ ticker, setTicker }) {
   // const APIKEY = process.env.REACT_APP_APIKEY;
   const LOGOAPIKEY = process.env.REACT_APP_LOGOAPIKEY;
   const logoURL = `https://cloud.iexapis.com/stable/stock/${ticker}/logo/quote?token=${LOGOAPIKEY}`;
-  // const URL = `https://www.alphavantage.co/query?apikey=${APIKEY}&function=OVERVIEW&symbol=${ticker}`;
   const URL = `https://cloud.iexapis.com/stable/stock/${ticker}/company/query?token=${LOGOAPIKEY}`;
   const [overview, setOverview] = useState({});
   const [img, setImg] = useState("");
@@ -21,13 +22,13 @@ function CompanyOverview({ ticker }) {
       let data = await res.json();
       setOverview(data);
       setLoading("ran");
-
       res = await fetch(logoURL);
       data = await res.json();
       setImg(data);
     } catch (error) {
       alert("No details found");
       setLoading("ran");
+      setTicker("");
     }
   }
 
@@ -79,7 +80,7 @@ function CompanyOverview({ ticker }) {
       <>
         <div
           className={styles.card}
-          style={{ flexBasis: "58%", fontSize: "0.8rem" }}
+          style={{ flexBasis: "58%", fontSize: "1rem" }}
         >
           <div className={styles.container}>
             <div
@@ -99,11 +100,12 @@ function CompanyOverview({ ticker }) {
                 <LikeButton ticker={ticker} />
                 <h2>{overview.companyName}</h2>
                 <div style={{ margin: "auto 0" }}>
-                  <img src={img.url} alt="" style={{ width: "50px" }} />
+                  <img src={img.url} alt="" style={{ width: "60px" }} />
                 </div>
               </div>
 
               <div>{arr}</div>
+              <Details />
             </div>
           </div>
         </div>
