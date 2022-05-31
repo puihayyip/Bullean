@@ -10,8 +10,7 @@ function DetailsChild({ data }) {
 
   const handleChange = (event, newValue) => {
     setSelectedTab(newValue);
-    console.log(selectedTab);
-    switch (selectedTab) {
+    switch (newValue) {
       case 0:
         goTo("/search/Summary");
         break;
@@ -44,13 +43,13 @@ function DetailsChild({ data }) {
         </Tabs>
       </Box>
       <Outlet />
-      {Object.keys(data).map((key, index) => {
+      {/* {Object.keys(data).map((key, index) => {
         return (
           <p key={index}>
             {key}: {data[key]}
           </p>
         );
-      })}
+      })} */}
     </>
   );
 }

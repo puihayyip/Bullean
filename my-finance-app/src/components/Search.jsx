@@ -47,7 +47,11 @@ function Search() {
       <br />
       <div style={{ display: "flex", gap: "2%", alignItems: "flex-start" }}>
         <div
-          style={{ flexBasis: "40%", display: "flex", flexDirection: "column" }}
+          style={{
+            flexBasis: "40%",
+            display: "flex",
+            flexDirection: "column",
+          }}
           id="cards"
         >
           <Cards result={result} setTicker={setTicker} />
