@@ -15,8 +15,8 @@ function Details({ ticker }) {
 
   async function fetchData() {
     const res = await fetch(URLOverview);
-    const Data = await res.json();
-    setState({ ...state, companyData: Data });
+    const data = await res.json();
+    setState({ ...state, companyData: data });
 
     const secondRes = await fetch(URLDaily);
     const secondData = await secondRes.json();
