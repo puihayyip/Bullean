@@ -10,6 +10,7 @@ function DetailsChild({ data }) {
 
   const handleChange = (event, newValue) => {
     setSelectedTab(newValue);
+    console.log(selectedTab);
     switch (selectedTab) {
       case 0:
         goTo("/search/Summary");
