@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import searchResults from "../sampleAPIs/SearchEndpoint.json";
+
 import Cards from "./Cards";
 import LoadingScreen from "./LoadingScreen";
 import CompanyOverview from "./CompanyOverview";
@@ -54,7 +55,7 @@ function Search() {
           }}
           id="cards"
         >
-          <Cards result={result} setTicker={setTicker} />
+          <Cards result={result} setTicker={setTicker} ticker={ticker} />
         </div>
         <CompanyOverview ticker={ticker} setTicker={setTicker} />
       </div>

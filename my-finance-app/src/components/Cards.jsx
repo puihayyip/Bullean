@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Cards.module.css";
 
-function Cards({ result, setTicker }) {
+function Cards({ result, setTicker, ticker }) {
   const handleClick = (e) => {
     const parentID = e.target.parentNode.id;
     setTicker(parentID);

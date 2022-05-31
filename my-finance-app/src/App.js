@@ -20,22 +20,35 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 
-export const likedListContext = createContext();
+export const stateContext = createContext();
 
 function App() {
-  const [likedList, setLikedList] = useState([]);
-  console.log(likedList);
+  const [state, setState] = useState({
+    likedList: [],
+    selectedTicker: "",
+    companyData: {},
+    dailyShares: {},
+  });
+  console.log(state);
 
   return (
     <div className="App">
-      <likedListContext.Provider value={[likedList, setLikedList]}>
+      <stateContext.Provider value={[state, setState]}>
         <BrowserRouter>
           <NavBar />
           <Routes>
             <Route path="/" element={<Watchlist />} />
             <Route path="/about" element={<About />} />
             <Route path="/search" element={<Search />}>
-              <Route path="Summary" element={<Summary />} />
+              <Route
+                path="Summary"
+                element={
+                  <Summary
+                    companyData={state.companyData}
+                    dailyShares={state.dailyShares}
+                  />
+                }
+              />
               <Route path="Chart" element={<Chart />} />
               <Route path="Statistics" element={<Statistics />} />
               <Route path="HistoricalData" element={<HistoricalData />} />
@@ -44,7 +57,7 @@ function App() {
           </Routes>
           {/* <Footer /> */}
         </BrowserRouter>
-      </likedListContext.Provider>
+      </stateContext.Provider>
     </div>
   );
 }

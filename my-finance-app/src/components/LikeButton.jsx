@@ -1,14 +1,15 @@
 import React, { useState, useContext, useEffect } from "react";
 import styles from "./LikeButton.module.css";
-import { likedListContext } from "../App";
+import { stateContext } from "../App";
 
 function LikeButton({ ticker }) {
   const [like, setLike] = useState(true);
   const [check, setCheck] = useState(null);
-  const [likedList, setLikedList] = useContext(likedListContext);
+  // const [likedList, setLikedList] = useContext(likedListContext);
+  const [state, setState] = useContext(stateContext);
 
   useEffect(() => {
-    if (likedList.includes(ticker)) {
+    if (state.likedList.includes(ticker)) {
       setCheck(true);
       setLike(false);
     } else {
@@ -21,12 +22,14 @@ function LikeButton({ ticker }) {
       e.target.style.color = "red";
       e.target.style.fontSize = "18px";
       e.target.innerHTML = "&#x2764;";
-      setLikedList([...likedList, e.target.id]);
+      setState({ likedList: [...state.likedList, e.target.id] });
     } else {
       e.target.style.color = "black";
       e.target.style.fontSize = "24px";
       e.target.innerHTML = "&#9825;";
-      setLikedList(likedList.filter((companies) => companies !== ticker));
+      setState({
+        likedList: state.likedList.filter((companies) => companies !== ticker),
+      });
     }
     setLike(!like);
   };

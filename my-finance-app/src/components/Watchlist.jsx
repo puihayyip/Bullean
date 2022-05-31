@@ -1,18 +1,18 @@
 import React, { useContext } from "react";
-import { likedListContext } from "../App";
+import { stateContext } from "../App";
 import LikeButton from "./LikeButton";
 import WatchlistCards from "./WatchlistCards";
 
 function Watchlist() {
-  const [likedList, setLikedList] = useContext(likedListContext);
+  const [state, setState] = useContext(stateContext);
   return (
     <div className="bodyContent">
       <h1>My Watchlist</h1>
-      {likedList.map((ticker, index) => (
+      {state.likedList.map((ticker, index) => (
         <WatchlistCards
           key={index}
-          likedList={likedList}
-          setLikedList={setLikedList}
+          state={state}
+          setState={setState}
           ticker={ticker}
           // index={index}
         />

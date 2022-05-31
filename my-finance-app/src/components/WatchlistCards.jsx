@@ -1,7 +1,7 @@
 import React from "react";
 import { AiFillDelete } from "react-icons/ai";
 
-function WatchlistCards({ index, ticker, setLikedList, likedList }) {
+function WatchlistCards({ index, ticker, setState, state }) {
   return (
     <div
       style={{
@@ -13,7 +13,11 @@ function WatchlistCards({ index, ticker, setLikedList, likedList }) {
       <p>{ticker}</p>
       <AiFillDelete
         onClick={() =>
-          setLikedList(likedList.filter((companies) => companies !== ticker))
+          setState({
+            likedList: state.likedList.filter(
+              (companies) => companies !== ticker
+            ),
+          })
         }
       />
     </div>

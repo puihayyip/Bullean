@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import Header from "./Header";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import { Outlet, useNavigate } from "react-router-dom";
 
-function DetailsChild({ data }) {
+<Header />;
+function DetailsChild() {
   const [selectedTab, setSelectedTab] = useState(0);
   const goTo = useNavigate();
 
@@ -33,6 +35,7 @@ function DetailsChild({ data }) {
 
   return (
     <>
+      <Header />
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs value={selectedTab} onChange={handleChange} variant="fullWidth">
           <Tab label="Summary" />
@@ -43,13 +46,6 @@ function DetailsChild({ data }) {
         </Tabs>
       </Box>
       <Outlet />
-      {/* {Object.keys(data).map((key, index) => {
-        return (
-          <p key={index}>
-            {key}: {data[key]}
-          </p>
-        );
-      })} */}
     </>
   );
 }

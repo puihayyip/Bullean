@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import LoadingScreen from "./LoadingScreen";
 import overviewData from "../sampleAPIs/CompanyOverview.json";
 import styles from "./Cards.module.css";
 import LikeButton from "./LikeButton";
 import DetailsParent from "./CompanyDetails/DetailsParent";
+import { stateContext } from "../App";
 
 function CompanyOverview({ ticker, setTicker }) {
-  // const APIKEY = process.env.REACT_APP_APIKEY;
+  const [state, setState] = useContext(stateContext);
   const LOGOAPIKEY = process.env.REACT_APP_LOGOAPIKEY;
   const logoURL = `https://cloud.iexapis.com/stable/stock/${ticker}/logo/quote?token=${LOGOAPIKEY}`;
   const URL = `https://cloud.iexapis.com/stable/stock/${ticker}/company/query?token=${LOGOAPIKEY}`;
@@ -19,6 +20,7 @@ function CompanyOverview({ ticker, setTicker }) {
     try {
       let res = await fetch(URL);
       let data = await res.json();
+      setState({ ...state, selectedTicker: ticker });
       setOverview(data);
       setLoading("ran");
       res = await fetch(logoURL);
