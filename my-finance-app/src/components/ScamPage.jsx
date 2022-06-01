@@ -6,7 +6,7 @@ import $ from "jquery";
 import useWindowSize from "react-use/lib/useWindowSize";
 import Confetti from "react-confetti";
 
-function Home() {
+function ScamPage() {
   const { width, height } = useWindowSize();
   const [time, setTime] = useState(120);
   const [explode, setExplode] = useState(false);
@@ -38,8 +38,7 @@ function Home() {
       style={{
         backgroundImage: `url(${backgroundImg})`,
         backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        height: "600px",
+        height: "100vh",
         display: "flex",
       }}
     >
@@ -83,12 +82,8 @@ function Home() {
         <source src={voice} type="audio/mpeg" />
         Your browser does not support the audio tag.
       </audio>
-      {/* <audio autoPlay>
-        <source src={yay} type="audio/mpeg" />
-        Your browser does not support the audio tag.
-      </audio> */}
     </div>
   );
 }
 
-export default Home;
+export default ScamPage;

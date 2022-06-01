@@ -57,6 +57,14 @@ function OneDayChart() {
         text: "1D Movement",
       },
     },
+    scales: {
+      x: {
+        ticks: {
+          maxTicksLimit: 10,
+          display: false,
+        },
+      },
+    },
   };
 
   const labels = Object.keys(DATA["Time Series (5min)"]).reverse();
@@ -75,7 +83,7 @@ function OneDayChart() {
     ],
   };
 
-  return <Line options={options} data={data} style={{ width: "700px" }} />;
+  return <Line options={options} data={data} style={{ width: "600px" }} />;
 }
 
 export default OneDayChart;

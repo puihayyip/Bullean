@@ -87,7 +87,7 @@ function Summary({ dailyShares, overview }) {
             <p>{overview.AnalystTargetPrice}</p>
           </div>
         </div>
-        <div style={{ marginLeft: "20px" }}>
+        <div style={{ marginLeft: "80px", paddingBottom: "10px" }}>
           <OneDayChart />
         </div>
       </div>
