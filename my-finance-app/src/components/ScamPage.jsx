@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import backgroundImg from "../resources/moneyDrop.gif";
 import voice from "../resources/ScammerVoice.mp3";
 import yay from "../resources/ChildrenYaySoundEffect.mp3";
+import emotionalDamage from "../resources/EmotionalDamage.mp3";
 import $ from "jquery";
 import useWindowSize from "react-use/lib/useWindowSize";
 import Confetti from "react-confetti";
@@ -10,15 +11,24 @@ function ScamPage() {
   const { width, height } = useWindowSize();
   const [time, setTime] = useState(120);
   const [explode, setExplode] = useState(false);
-  const computer = new Audio(voice);
+  const [pass, setPass] = useState(false);
   const childrenYay = new Audio(yay);
+  const ed = new Audio(emotionalDamage);
 
   useEffect(() => {
-    while (time > 0) {
+    while (time > 0 && !pass) {
       const interval = setInterval(() => setTime(time - 1), 1000);
       return () => clearInterval(interval);
     }
   }, [time]);
+
+  pass ? $(".navbar").show() : $(".navbar").hide();
+  if (time === 0) {
+    ed.play();
+    setTimeout(() => {
+      window.open("https://www.youtube.com/watch?v=jqJAn39umHs", "_self");
+    }, 14000);
+  }
 
   let r = Math.floor(Math.random() * 256);
   let g = Math.floor(Math.random() * 256);
@@ -28,9 +38,12 @@ function ScamPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (e.target[0].value === "emotionaldamage") {
+      setExplode(true);
+      childrenYay.play();
+      setPass(true);
+    }
     e.target[0].value = "";
-    setExplode(true);
-    childrenYay.play();
   };
 
   return (
@@ -56,11 +69,13 @@ function ScamPage() {
         <h1 className="congrats">CONGRATULATIONS!</h1>
         <h1>1 $1000 Amazon Gift Card</h1>
         <h2>
-          is reserved just for you, <i>Facebook User</i>!
+          is reserved just for you, <i>Fellow Coder!</i>
         </h2>
         <br />
-        <p>Step 1: Click the SEARCH button to claim your price.</p>
-        <p>Step 2: Enter your credit card number to claim your price</p>
+        <p>Step 1: Find your credit card</p>
+        <p>Step 2: Enter your credit card number to claim your prize</p>
+        <p>Step 3: Submit the form to pay the tax for the gift card</p>
+        <p>Step 4: Receive the gift card in your inbox</p>
         <form action="" onSubmit={(e) => handleSubmit(e)}>
           <input type="text" name="" id="" placeholder="Credit Card" />
           <button>Submit</button>
