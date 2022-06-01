@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { Line } from "react-chartjs-2";
 import { stateContext } from "../../App";
+import DATA from "../../sampleAPIs/Intraday.json";
 
 import {
   Chart as ChartJS,
@@ -38,8 +39,12 @@ function OneDayChart() {
   }
 
   useEffect(() => {
-    fetchData();
+    // fetchData();
   }, []);
+
+  if (state.intradayData === null || state.intradayData === undefined) {
+    // return null;
+  }
 
   const options = {
     responsive: true,
@@ -54,29 +59,23 @@ function OneDayChart() {
     },
   };
 
-  const labels = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-  ];
+  const labels = Object.keys(DATA["Time Series (5min)"]).reverse();
 
   const data = {
     labels,
     datasets: [
       {
         label: "AAPL",
-        data: [6, 5, 5, 2, 5, 0, 1],
+        data: labels.map(
+          (label) => DATA["Time Series (5min)"][label]["4. close"]
+        ),
         borderColor: "rgb(255, 99, 132)",
         backgroundColor: "rgba(255, 99, 132, 0.5)",
       },
     ],
   };
 
-  return <Line options={options} data={data} style={{ width: "450px" }} />;
+  return <Line options={options} data={data} style={{ width: "700px" }} />;
 }
 
 export default OneDayChart;

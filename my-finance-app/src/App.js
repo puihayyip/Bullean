@@ -29,6 +29,7 @@ function App() {
     selectedTicker: "",
     companyData: {},
     dailyShares: {},
+    intradayData: {},
   });
   console.log(state);
 
