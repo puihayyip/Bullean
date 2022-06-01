@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Line } from "react-chartjs-2";
+import { stateContext } from "../../App";
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -22,6 +24,23 @@ ChartJS.register(
 );
 
 function OneDayChart() {
+  const [state, setState] = useContext(stateContext);
+  const ticker = state.selectedTicker;
+
+  const APIKEY = process.env.REACT_APP_APIKEY;
+  const URL = `https://www.alphavantage.co/query?apikey=${APIKEY}&function=TIME_SERIES_INTRADAY&symbol=${ticker}`;
+
+  async function fetchData() {
+    const res = await fetch(URL);
+    const data = await res.json();
+
+    setState({ ...state, intradayData: data });
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   const options = {
     responsive: true,
     plugins: {
