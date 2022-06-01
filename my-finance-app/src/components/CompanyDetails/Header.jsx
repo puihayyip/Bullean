@@ -12,7 +12,7 @@ function Header() {
   const priceDiff =
     Object.values(sharesObj)?.[0]?.["4. close"] -
     Object.values(sharesObj)?.[1]?.["4. close"];
-
+    
   if (priceDiff > 0) {
     $("#priceChange").css("color", "green");
     $("#percentagePriceChange").css("color", "green");
