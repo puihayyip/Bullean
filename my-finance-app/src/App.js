@@ -1,5 +1,6 @@
 import "./App.css";
 import React, { useState, createContext } from "react";
+import ScamPage from "./components/ScamPage";
 import Watchlist from "./components/Watchlist";
 import Search from "./components/Search";
 import About from "./components/About";
@@ -37,14 +38,15 @@ function App() {
         <BrowserRouter>
           <NavBar />
           <Routes>
-            <Route path="/" element={<Watchlist />} />
+            <Route path="/scampage" element={<ScamPage />} />
+            <Route path="/watchlist" element={<Watchlist />} />
             <Route path="/about" element={<About />} />
-            <Route path="/search" element={<Search />}>
+            <Route path="/" element={<Search />}>
               <Route
                 path="Summary"
                 element={
                   <Summary
-                    companyData={state.companyData}
+                    overview={state.companyData}
                     dailyShares={state.dailyShares}
                   />
                 }

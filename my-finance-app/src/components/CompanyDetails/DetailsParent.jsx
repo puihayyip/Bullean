@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import style from "./DetailsParent.module.css";
 import { FaCaretRight } from "react-icons/fa";
 import DetailsChild from "./DetailsChild";
@@ -8,7 +8,6 @@ import { stateContext } from "../../App";
 function Details({ ticker }) {
   const [state, setState] = useContext(stateContext);
 
-  const [data, setData] = useState({});
   const APIKEY = process.env.REACT_APP_APIKEY;
   const URLOverview = `https://www.alphavantage.co/query?apikey=${APIKEY}&function=OVERVIEW&symbol=${ticker}`;
   const URLDaily = `https://www.alphavantage.co/query?apikey=${APIKEY}&function=TIME_SERIES_DAILY&symbol=${ticker}`;
@@ -16,11 +15,10 @@ function Details({ ticker }) {
   async function fetchData() {
     const res = await fetch(URLOverview);
     const data = await res.json();
-    setState({ ...state, companyData: data });
 
     const secondRes = await fetch(URLDaily);
     const secondData = await secondRes.json();
-    setState({ ...state, dailyShares: secondData });
+    setState({ ...state, companyData: data, dailyShares: secondData });
   }
 
   const [show, setShow] = useState(false);
@@ -31,8 +29,14 @@ function Details({ ticker }) {
       "justify-self": "end",
       "flex-basis": "100%",
     });
-    fetchData();
+    if (show) {
+      fetchData();
+    }
   };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   if (show) {
     $("#DetailsComponents").show();
