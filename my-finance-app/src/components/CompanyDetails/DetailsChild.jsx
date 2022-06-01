@@ -14,19 +14,19 @@ function DetailsChild() {
     setSelectedTab(newValue);
     switch (newValue) {
       case 0:
-        goTo("/search/Summary");
+        goTo("/Summary");
         break;
       case 1:
-        goTo("/search/Chart");
+        goTo("/Chart");
         break;
       case 2:
-        goTo("/search/Statistics");
+        goTo("/Statistics");
         break;
       case 3:
-        goTo("/search/HistoricalData");
+        goTo("/HistoricalData");
         break;
       case 4:
-        goTo("/search/Financials");
+        goTo("/Financials");
         break;
       default:
         return;

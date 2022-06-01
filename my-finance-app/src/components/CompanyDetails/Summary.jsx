@@ -1,4 +1,5 @@
 import React from "react";
+import OneDayChart from "./OneDayChart";
 import data from "../../sampleAPIs/CompanyOverview.json";
 
 function Summary({ dailyShares, overview }) {
@@ -18,7 +19,7 @@ function Summary({ dailyShares, overview }) {
   return (
     <div className="container">
       <h1>Summary</h1>
-      <div style={{ display: "flex", gap: "70px" }}>
+      <div style={{ display: "flex" }}>
         <div
           style={{ display: "flex", gap: "30px", justifyItems: "spaceAround" }}
         >
@@ -28,6 +29,8 @@ function Summary({ dailyShares, overview }) {
             <p>Day's Range:</p>
             <p>52-week Range:</p>
             <p>Volume:</p>
+            <p>Market cap</p>
+            <p>EPS (TTM)</p>
           </div>
           <div>
             <p>
@@ -53,29 +56,39 @@ function Summary({ dailyShares, overview }) {
               {overview["52WeekLow"]} - {overview["52WeekHigh"]}
             </p>
             <p>{numeral(overview.SharesOutstanding).format("0,0")}</p>
+            <p>{numeral(overview.MarketCapitalization).format("( 0.000 a)")}</p>
+            <p>{overview.EPS}</p>
           </div>
         </div>
-        <div style={{ display: "flex", justifyItems: "spaceAround" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyItems: "spaceAround",
+            marginLeft: "70px",
+          }}
+        >
           <div>
-            <p>Market cap</p>
             <p>Beta (5Y monthly)</p>
             <p>PE ratio (TTM)</p>
-            <p>EPS (TTM)</p>
-            <p>Earnings date</p>
+            <p>Last Quarter</p>
             <p>Forward dividend & yield</p>
             <p>Ex-dividend date</p>
             <p>1y target est</p>
           </div>
           <div style={{ marginLeft: "30px" }}>
-            <p>{numeral(overview.MarketCapitalization).format("( 0.000 a)")}</p>
             <p>{overview.Beta}</p>
             <p>{overview.TrailingPE}</p>
-            <p>{overview.EPS}</p>
-            <p>28 Jun 2022 - 04 Jul 2022</p>
-            <p>0.40 (0.55%)</p>
+            <p>{overview.LatestQuarter}</p>
+            <p>
+              {overview.DividendPerShare} (
+              {numeral(overview.DividendYield).format("(0.00%)")})
+            </p>
             <p>{exDivDate}</p>
-            <p>110.42</p>
+            <p>{overview.AnalystTargetPrice}</p>
           </div>
+        </div>
+        <div style={{ marginLeft: "20px" }}>
+          <OneDayChart />
         </div>
       </div>
     </div>

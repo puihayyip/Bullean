@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import backgroundImg from "../pics/moneyDrop.gif";
-import voice from "../pics/ScammerVoice.mp3";
-import yay from "../pics/ChildrenYaySoundEffect.mp3";
+import backgroundImg from "../resources/moneyDrop.gif";
+import voice from "../resources/ScammerVoice.mp3";
+import yay from "../resources/ChildrenYaySoundEffect.mp3";
 import $ from "jquery";
 import useWindowSize from "react-use/lib/useWindowSize";
 import Confetti from "react-confetti";
@@ -50,7 +50,7 @@ function Home() {
           display: "inline-block",
           margin: "auto",
           backgroundColor: "lightgray ",
-          border: "10px red outset",
+          border: "10px red groove",
           padding: "50px",
         }}
       >

@@ -4,9 +4,11 @@ import { FaCaretRight } from "react-icons/fa";
 import DetailsChild from "./DetailsChild";
 import $ from "jquery";
 import { stateContext } from "../../App";
+import { useNavigate } from "react-router-dom";
 
 function Details({ ticker }) {
   const [state, setState] = useContext(stateContext);
+  const goTo = useNavigate();
 
   const APIKEY = process.env.REACT_APP_APIKEY;
   const URLOverview = `https://www.alphavantage.co/query?apikey=${APIKEY}&function=OVERVIEW&symbol=${ticker}`;
@@ -32,6 +34,7 @@ function Details({ ticker }) {
     if (show) {
       fetchData();
     }
+    goTo("/Summary");
   };
 
   useEffect(() => {
