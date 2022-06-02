@@ -7,8 +7,6 @@ import DetailsParent from "./CompanyDetails/DetailsParent";
 import { stateContext } from "../App";
 
 function CompanyOverview({ ticker, setTicker }) {
-  const numeral = require("numeral");
-
   const [state, setState] = useContext(stateContext);
   const LOGOAPIKEY = process.env.REACT_APP_LOGOAPIKEY;
   const logoURL = `https://cloud.iexapis.com/stable/stock/${ticker}/logo/quote?token=${LOGOAPIKEY}`;
@@ -73,7 +71,7 @@ function CompanyOverview({ ticker, setTicker }) {
         <b>Country</b>: {overview.country}
       </p>
       <p>
-        <b>Employees</b>: {numeral(overview.employees).format("0,0")}
+        <b>Employees</b>: {overview.employees}
       </p>
     </div>,
   ];

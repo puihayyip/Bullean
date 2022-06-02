@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { Line } from "react-chartjs-2";
 import { stateContext } from "../../App";
 
@@ -33,17 +33,13 @@ function OneDayChart() {
   async function fetchData() {
     const res = await fetch(URL);
     const data = await res.json();
+
     setState({ ...state, intradayData: data });
   }
 
   useEffect(() => {
     fetchData();
   }, []);
-
-  const intraData = state.intradayData;
-  if (intraData === null || intraData === undefined) {
-    return null;
-  }
 
   const options = {
     spanGaps: true,
@@ -65,14 +61,15 @@ function OneDayChart() {
         },
       },
     },
-    elements: {
-      point: {
-        radius: 0,
-      },
-    },
   };
 
+  const intraData = state.intradayData;
+  if (intraData === null || intraData === undefined) {
+    return null;
+  }
+
   let labels = intraData.map((each) => each.minute);
+
   const data = {
     labels,
     datasets: [
@@ -85,7 +82,7 @@ function OneDayChart() {
     ],
   };
 
-  return <Line options={options} data={data} style={{ width: "450px" }} />;
+  return <Line options={options} data={data} style={{ width: "600px" }} />;
 }
 
 export default OneDayChart;

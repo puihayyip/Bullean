@@ -11,9 +11,8 @@ function Details({ ticker }) {
   const goTo = useNavigate();
 
   const APIKEY = process.env.REACT_APP_APIKEY;
-  const APIKEY3 = process.env.REACT_APP_APIKEY3;
   const URLOverview = `https://www.alphavantage.co/query?apikey=${APIKEY}&function=OVERVIEW&symbol=${ticker}`;
-  const URLDaily = `https://www.alphavantage.co/query?apikey=${APIKEY3}&function=TIME_SERIES_DAILY&symbol=${ticker}`;
+  const URLDaily = `https://www.alphavantage.co/query?apikey=${APIKEY}&function=TIME_SERIES_DAILY&symbol=${ticker}`;
 
   async function fetchData() {
     const res = await fetch(URLOverview);
