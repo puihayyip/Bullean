@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 import { stateContext } from "../../App";
 
@@ -25,21 +25,27 @@ ChartJS.register(
 
 function OneDayChart() {
   const [state, setState] = useContext(stateContext);
+  // const [render, setRender] = useState(false);
   const ticker = state.selectedTicker;
 
   const APIKEY = process.env.REACT_APP_LOGOAPIKEY;
   const URL = `https://cloud.iexapis.com/stable/stock/${ticker}/intraday-prices?token=${APIKEY}`;
+  // const URL = `https://cloud.iexapis.com/stable/stock/${ticker}/intraday-prices?chartInterval=5&token=${APIKEY}`;
 
   async function fetchData() {
     const res = await fetch(URL);
     const data = await res.json();
-
     setState({ ...state, intradayData: data });
   }
 
   useEffect(() => {
     fetchData();
   }, []);
+
+  const intraData = state.intradayData;
+  if (intraData === null || intraData === undefined) {
+    return null;
+  }
 
   const options = {
     spanGaps: true,
@@ -61,15 +67,14 @@ function OneDayChart() {
         },
       },
     },
+    elements: {
+      point: {
+        radius: 0,
+      },
+    },
   };
 
-  const intraData = state.intradayData;
-  if (intraData === null || intraData === undefined) {
-    return null;
-  }
-
-  let labels = intraData.map((each) => each.minute);
-
+  const labels = intraData.map((each) => each.minute);
   const data = {
     labels,
     datasets: [
@@ -82,7 +87,7 @@ function OneDayChart() {
     ],
   };
 
-  return <Line options={options} data={data} style={{ width: "600px" }} />;
+  return <Line options={options} data={data} style={{ width: "450px" }} />;
 }
 
 export default OneDayChart;

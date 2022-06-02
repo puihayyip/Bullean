@@ -1,5 +1,6 @@
 body {
   font-family: sans-serif;
+  /* margin-bottom: 50px; */
   /* font-size: 20px; */
   /* background-image: url(./pics/FU8l.gif); */
 }
@@ -84,4 +85,7 @@ footer {
   height: 3rem;
   align-items: flex-end;
   background-color: #f4f4f4;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
 }

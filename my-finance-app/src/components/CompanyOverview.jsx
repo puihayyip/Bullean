@@ -15,6 +15,7 @@ function CompanyOverview({ ticker, setTicker }) {
   const [img, setImg] = useState("");
   const [loading, setLoading] = useState("");
   const [prevTicker, setPrevTicker] = useState("");
+  const numeral = require("numeral");
 
   async function fetchCompanyData() {
     try {
@@ -71,7 +72,7 @@ function CompanyOverview({ ticker, setTicker }) {
         <b>Country</b>: {overview.country}
       </p>
       <p>
-        <b>Employees</b>: {overview.employees}
+        <b>Employees</b>: {numeral(overview.employees).format("0,0")}
       </p>
     </div>,
   ];

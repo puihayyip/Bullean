@@ -11,8 +11,9 @@ function Details({ ticker }) {
   const goTo = useNavigate();
 
   const APIKEY = process.env.REACT_APP_APIKEY;
+  const APIKEY2 = process.env.REACT_APP_APIKEY2;
   const URLOverview = `https://www.alphavantage.co/query?apikey=${APIKEY}&function=OVERVIEW&symbol=${ticker}`;
-  const URLDaily = `https://www.alphavantage.co/query?apikey=${APIKEY}&function=TIME_SERIES_DAILY&symbol=${ticker}`;
+  const URLDaily = `https://www.alphavantage.co/query?apikey=${APIKEY2}&function=TIME_SERIES_DAILY&symbol=${ticker}`;
 
   async function fetchData() {
     const res = await fetch(URLOverview);
@@ -37,9 +38,9 @@ function Details({ ticker }) {
     goTo("/Summary");
   };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
 
   if (show) {
     $("#DetailsComponents").show();
