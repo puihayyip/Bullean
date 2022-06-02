@@ -7,14 +7,14 @@ import CompanyOverview from "./CompanyOverview";
 import ScrollToTopBtn from "./ScrollToTopBtn";
 
 function Search() {
-  const APIKEY = process.env.REACT_APP_APIKEY;
+  const APIKEY2 = process.env.REACT_APP_APIKEY2;
   const [search, setSearch] = useState("");
   const [result, setResult] = useState({ bestMatches: [] });
   const [loading, setLoading] = useState("");
   const [ticker, setTicker] = useState("");
 
   async function fetchData() {
-    const url = `https://www.alphavantage.co/query?apikey=${APIKEY}&function=SYMBOL_SEARCH&datatype=json&keywords=${search}`;
+    const url = `https://www.alphavantage.co/query?apikey=${APIKEY2}&function=SYMBOL_SEARCH&datatype=json&keywords=${search}`;
     const res = await fetch(url);
     const data = await res.json();
     setResult(data);
