@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { stateContext } from "../App";
+import { stateContext } from "../../App";
 import LikeButton from "./LikeButton";
 import WatchlistCards from "./WatchlistCards";
 

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { Line } from "react-chartjs-2";
-import { stateContext } from "../../App";
+import { stateContext } from "../../../App";
 
 import {
   Chart as ChartJS,
@@ -23,66 +23,80 @@ ChartJS.register(
   Legend
 );
 
-function OneDayChart() {
+function YTDChart() {
   const [state, setState] = useContext(stateContext);
   const ticker = state.selectedTicker;
 
   const APIKEY = process.env.REACT_APP_LOGOAPIKEY;
-  const URL = `https://cloud.iexapis.com/stable/stock/${ticker}/intraday-prices?token=${APIKEY}`;
+  const URL = `https://cloud.iexapis.com/stable/stock/${ticker}/chart/YTD?token=${APIKEY}`;
 
   async function fetchData() {
     const res = await fetch(URL);
     const data = await res.json();
 
-    setState({ ...state, intradayData: data });
+    setState({
+      ...state,
+      chartData: { ...state.chartData, YTDMonthChartData: data },
+    });
   }
 
   useEffect(() => {
     fetchData();
+    window.scrollTo(0, document.body.scrollHeight);
   }, []);
 
   const options = {
     spanGaps: true,
     responsive: true,
+    maintainAspectRatio: true,
     plugins: {
       legend: {
         position: "bottom",
       },
       title: {
         display: true,
-        text: "1D Movement",
+        text: "YTD movement, 1 day interval",
       },
     },
     scales: {
       x: {
         ticks: {
-          maxTicksLimit: 10,
-          display: false,
+          // maxTicksLimit: 30,
+          // display: false,
         },
+      },
+    },
+    elements: {
+      point: {
+        radius: 0,
       },
     },
   };
 
-  const intraData = state.intradayData;
-  if (intraData === null || intraData === undefined) {
+  const localChartData = state.chartData.YTDMonthChartData;
+  if (localChartData === null || localChartData === undefined) {
     return null;
   }
 
-  let labels = intraData.map((each) => each.minute);
+  let labels = localChartData.map((each) => each.date);
 
   const data = {
     labels,
     datasets: [
       {
         label: ticker,
-        data: intraData.map((minute) => minute.close),
+        data: localChartData.map((period) => period.close),
         borderColor: "rgb(255, 99, 132)",
         backgroundColor: "rgba(255, 99, 132, 0.5)",
       },
     ],
   };
 
-  return <Line options={options} data={data} style={{ width: "600px" }} />;
+  return localChartData ? (
+    <Line options={options} data={data} />
+  ) : (
+    <p>Please press on chart and back here to reload chart</p>
+  );
 }
 
-export default OneDayChart;
+export default YTDChart;

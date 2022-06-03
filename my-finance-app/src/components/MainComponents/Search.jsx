@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import searchResults from "../sampleAPIs/SearchEndpoint.json";
+import searchResults from "../../sampleAPIs/SearchEndpoint.json";
+import { useNavigate } from "react-router-dom";
 
 import Cards from "./Cards";
 import LoadingScreen from "./LoadingScreen";
@@ -7,14 +8,15 @@ import CompanyOverview from "./CompanyOverview";
 import ScrollToTopBtn from "./ScrollToTopBtn";
 
 function Search() {
-  const APIKEY = process.env.REACT_APP_APIKEY;
+  const APIKEY3 = process.env.REACT_APP_APIKEY3;
   const [search, setSearch] = useState("");
   const [result, setResult] = useState({ bestMatches: [] });
   const [loading, setLoading] = useState("");
   const [ticker, setTicker] = useState("");
+  const goTo = useNavigate();
 
   async function fetchData() {
-    const url = `https://www.alphavantage.co/query?apikey=${APIKEY}&function=SYMBOL_SEARCH&datatype=json&keywords=${search}`;
+    const url = `https://www.alphavantage.co/query?apikey=${APIKEY3}&function=SYMBOL_SEARCH&datatype=json&keywords=${search}`;
     const res = await fetch(url);
     const data = await res.json();
     setResult(data);
@@ -25,6 +27,7 @@ function Search() {
     e.preventDefault();
     e.target[0].value = "";
     setLoading("loading");
+    goTo("/");
     fetchData();
   };
 

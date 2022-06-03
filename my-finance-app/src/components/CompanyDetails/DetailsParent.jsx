@@ -11,8 +11,9 @@ function Details({ ticker }) {
   const goTo = useNavigate();
 
   const APIKEY = process.env.REACT_APP_APIKEY;
+  const APIKEY2 = process.env.REACT_APP_APIKEY2;
   const URLOverview = `https://www.alphavantage.co/query?apikey=${APIKEY}&function=OVERVIEW&symbol=${ticker}`;
-  const URLDaily = `https://www.alphavantage.co/query?apikey=${APIKEY}&function=TIME_SERIES_DAILY&symbol=${ticker}`;
+  const URLDaily = `https://www.alphavantage.co/query?apikey=${APIKEY2}&function=TIME_SERIES_DAILY&symbol=${ticker}`;
 
   async function fetchData() {
     const res = await fetch(URLOverview);
@@ -20,6 +21,15 @@ function Details({ ticker }) {
 
     const secondRes = await fetch(URLDaily);
     const secondData = await secondRes.json();
+
+    console.log("Fetching overview and daily");
+    if (
+      Object.keys(data).length === 1 ||
+      Object.keys(secondData).length === 1
+    ) {
+      alert("API calls exceeded, please wait a while before continue usage.");
+    }
+
     setState({ ...state, companyData: data, dailyShares: secondData });
   }
 
@@ -31,15 +41,9 @@ function Details({ ticker }) {
       "justify-self": "end",
       "flex-basis": "100%",
     });
-    if (show) {
-      fetchData();
-    }
+    fetchData();
     goTo("/Summary");
   };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   if (show) {
     $("#DetailsComponents").show();

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import backgroundImg from "../resources/moneyDrop.gif";
-import voice from "../resources/ScammerVoice.mp3";
-import yay from "../resources/ChildrenYaySoundEffect.mp3";
-import emotionalDamage from "../resources/EmotionalDamage.mp3";
+import backgroundImg from "../../resources/moneyDrop.gif";
+import voice from "../../resources/ScammerVoice.mp3";
+import yay from "../../resources/ChildrenYaySoundEffect.mp3";
+import emotionalDamage from "../../resources/EmotionalDamage.mp3";
 import $ from "jquery";
 import useWindowSize from "react-use/lib/useWindowSize";
 import Confetti from "react-confetti";

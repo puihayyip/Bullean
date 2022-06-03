@@ -17,7 +17,7 @@ function DetailsChild() {
         goTo("/Summary");
         break;
       case 1:
-        goTo("/Chart");
+        goTo("/Chart/OneDayChart");
         break;
       case 2:
         goTo("/Statistics");

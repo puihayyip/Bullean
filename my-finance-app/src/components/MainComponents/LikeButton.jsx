@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import styles from "./LikeButton.module.css";
-import { stateContext } from "../App";
+import { stateContext } from "../../App";
 
 function LikeButton({ ticker }) {
   const [like, setLike] = useState(true);

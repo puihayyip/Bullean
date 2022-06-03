@@ -1,5 +1,5 @@
 import React from "react";
-import OneDayChart from "./OneDayChart";
+import OneDayChart from "./ChartComponents/OneDayChart";
 import data from "../../sampleAPIs/CompanyOverview.json";
 
 function Summary({ dailyShares, overview }) {
