@@ -1,6 +1,6 @@
 import React from "react";
 import OneDayChart from "./ChartComponents/OneDayChart";
-import data from "../../sampleAPIs/CompanyOverview.json";
+// import data from "../../sampleAPIs/CompanyOverview.json";
 
 function Summary({ dailyShares, overview }) {
   const numeral = require("numeral");
