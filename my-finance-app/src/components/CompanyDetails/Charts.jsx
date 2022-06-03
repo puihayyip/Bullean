@@ -53,7 +53,8 @@ function Chart() {
       <Box
         sx={{
           flexGrow: 1,
-          display: "inline-flex",
+          display: "flex",
+          justifyContent: "center",
         }}
       >
         <Tabs

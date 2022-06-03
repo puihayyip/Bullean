@@ -78,7 +78,7 @@ function OneYearChart() {
     return null;
   }
 
-  let labels = localChartData.map((each) => each.date);
+  let labels = localChartData.map((each) => each.label);
 
   const data = {
     labels,

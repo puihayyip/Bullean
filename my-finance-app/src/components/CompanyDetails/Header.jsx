@@ -25,7 +25,7 @@ function Header() {
     <div style={{ display: "flex", gap: "20px" }}>
       <h3 id="sharePrice">
         Share Price:{" "}
-        {numeral(Object.values(sharesObj)[0]["4. close"])?.format("0.00")}
+        {numeral(Object.values(sharesObj)[0]["4. close"])?.format("0,0.00")}
       </h3>
       <h3 id="priceChange">{numeral(priceDiff)?.format("0.00")}</h3>
       <h3 id="percentagePriceChange">

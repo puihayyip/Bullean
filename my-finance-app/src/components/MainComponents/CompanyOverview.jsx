@@ -8,6 +8,7 @@ import { stateContext } from "../../App";
 
 function CompanyOverview({ ticker, setTicker }) {
   const [state, setState] = useContext(stateContext);
+  const numeral = require("numeral");
   const LOGOAPIKEY = process.env.REACT_APP_LOGOAPIKEY;
   const logoURL = `https://cloud.iexapis.com/stable/stock/${ticker}/logo/quote?token=${LOGOAPIKEY}`;
   const URL = `https://cloud.iexapis.com/stable/stock/${ticker}/company/query?token=${LOGOAPIKEY}`;
@@ -71,7 +72,7 @@ function CompanyOverview({ ticker, setTicker }) {
         <b>Country</b>: {overview.country}
       </p>
       <p>
-        <b>Employees</b>: {overview.employees}
+        <b>Employees</b>: {numeral(overview.employees).format("0,0")}
       </p>
     </div>,
   ];

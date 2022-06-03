@@ -61,8 +61,8 @@ function OneDayChart() {
     scales: {
       x: {
         ticks: {
-          maxTicksLimit: 10,
-          display: false,
+          maxTicksLimit: 16,
+          // display: false,
         },
       },
     },
@@ -78,7 +78,7 @@ function OneDayChart() {
     return null;
   }
 
-  let labels = intraData.map((each) => each.minute);
+  let labels = intraData.map((each) => each.label);
 
   const data = {
     labels,

@@ -10,11 +10,11 @@ import Confetti from "react-confetti";
 
 function ScamPage() {
   const { width, height } = useWindowSize();
-  const [time, setTime] = useState(10);
+  const [time, setTime] = useState(90);
   const [explode, setExplode] = useState(false);
   const [pass, setPass] = useState(false);
   const childrenYay = new Audio(yay);
-  const ed = new Audio(emotionalDamage);
+  const damageSound = new Audio(emotionalDamage);
 
   useEffect(() => {
     while (time > 0 && !pass) {
@@ -39,10 +39,6 @@ function ScamPage() {
         </video>
       </div>
     );
-    // ed.play();
-    // setTimeout(() => {
-    //   window.open("https://www.youtube.com/watch?v=jqJAn39umHs", "_self");
-    // }, 14000);
   }
 
   let r = Math.floor(Math.random() * 256);

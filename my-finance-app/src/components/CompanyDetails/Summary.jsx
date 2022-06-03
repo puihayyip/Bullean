@@ -35,21 +35,21 @@ function Summary({ dailyShares, overview }) {
           <div>
             <p>
               {numeral(Object.values(sharesObj)?.[1]?.["4. close"]).format(
-                "(0.00)"
+                "(0,0.00)"
               )}
             </p>
             <p>
               {numeral(Object.values(sharesObj)?.[0]?.["1. open"]).format(
-                "(0.00)"
+                "(0,0.00)"
               )}
             </p>
             <p>
               {numeral(Object.values(sharesObj)?.[0]?.["3. low"]).format(
-                "(0.00)"
+                "(0,0.00)"
               )}{" "}
               -{" "}
               {numeral(Object.values(sharesObj)?.[0]?.["2. high"]).format(
-                "(0.00)"
+                "(0,0.00)"
               )}
             </p>
             <p>
