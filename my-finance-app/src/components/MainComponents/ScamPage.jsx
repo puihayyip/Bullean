@@ -3,13 +3,14 @@ import backgroundImg from "../../resources/moneyDrop.gif";
 import voice from "../../resources/ScammerVoice.mp3";
 import yay from "../../resources/ChildrenYaySoundEffect.mp3";
 import emotionalDamage from "../../resources/EmotionalDamage.mp3";
+import FBIOpenUp from "../../resources/FBIOpenUp.mp4";
 import $ from "jquery";
 import useWindowSize from "react-use/lib/useWindowSize";
 import Confetti from "react-confetti";
 
 function ScamPage() {
   const { width, height } = useWindowSize();
-  const [time, setTime] = useState(90);
+  const [time, setTime] = useState(10);
   const [explode, setExplode] = useState(false);
   const [pass, setPass] = useState(false);
   const childrenYay = new Audio(yay);
@@ -24,10 +25,24 @@ function ScamPage() {
 
   pass ? $(".navbar").show() : $(".navbar").hide();
   if (time === 0) {
-    ed.play();
-    setTimeout(() => {
-      window.open("https://www.youtube.com/watch?v=jqJAn39umHs", "_self");
-    }, 14000);
+    return (
+      <div
+        style={{
+          backgroundImage: `url(${backgroundImg})`,
+          backgroundSize: "cover",
+          height: "100vh",
+          display: "flex",
+        }}
+      >
+        <video width="100%" height="100%" autoPlay loop>
+          <source src={FBIOpenUp} type="video/mp4" />
+        </video>
+      </div>
+    );
+    // ed.play();
+    // setTimeout(() => {
+    //   window.open("https://www.youtube.com/watch?v=jqJAn39umHs", "_self");
+    // }, 14000);
   }
 
   let r = Math.floor(Math.random() * 256);

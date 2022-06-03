@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import LoadingScreen from "./LoadingScreen";
-import overviewData from "../../sampleAPIs/CompanyOverview.json";
+// import overviewData from "../../sampleAPIs/CompanyOverview.json";
 import styles from "./Cards.module.css";
 import LikeButton from "./LikeButton";
 import DetailsParent from "../CompanyDetails/DetailsParent";

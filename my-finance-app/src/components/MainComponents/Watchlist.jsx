@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { stateContext } from "../../App";
-import LikeButton from "./LikeButton";
+// import LikeButton from "./LikeButton";
 import WatchlistCards from "./WatchlistCards";
 
 function Watchlist() {

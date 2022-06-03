@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import searchResults from "../../sampleAPIs/SearchEndpoint.json";
+// import searchResults from "../../sampleAPIs/SearchEndpoint.json";
 import { useNavigate } from "react-router-dom";
 
 import Cards from "./Cards";
