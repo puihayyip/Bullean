@@ -1,0 +1,1280 @@
+{
+	"defaultKeyStatistics": {
+		"annualHoldingsTurnover": {},
+		"enterpriseToRevenue": {
+			"raw": 4.188,
+			"fmt": "4.19"
+		},
+		"beta3Year": {},
+		"profitMargins": {
+			"raw": 0.27203,
+			"fmt": "27.20%"
+		},
+		"enterpriseToEbitda": {
+			"raw": 12.48,
+			"fmt": "12.48"
+		},
+		"52WeekChange": {
+			"raw": -0.1610297,
+			"fmt": "-16.10%"
+		},
+		"morningStarRiskRating": {},
+		"forwardEps": {
+			"raw": 8.74,
+			"fmt": "8.74"
+		},
+		"revenueQuarterlyGrowth": {},
+		"sharesOutstanding": {
+			"raw": 869947008,
+			"fmt": "869.95M",
+			"longFmt": "869,947,008"
+		},
+		"fundInceptionDate": {},
+		"annualReportExpenseRatio": {},
+		"totalAssets": {},
+		"bookValue": {
+			"raw": 13.31,
+			"fmt": "13.31"
+		},
+		"sharesShort": {
+			"raw": 12677308,
+			"fmt": "12.68M",
+			"longFmt": "12,677,308"
+		},
+		"sharesPercentSharesOut": {
+			"raw": 0.014400001,
+			"fmt": "1.44%"
+		},
+		"fundFamily": null,
+		"lastFiscalYearEnd": {
+			"raw": 1635638400,
+			"fmt": "2021-10-31"
+		},
+		"heldPercentInstitutions": {
+			"raw": 0.80728996,
+			"fmt": "80.73%"
+		},
+		"netIncomeToCommon": {
+			"raw": 6755999744,
+			"fmt": "6.76B",
+			"longFmt": "6,755,999,744"
+		},
+		"trailingEps": {
+			"raw": 7.488,
+			"fmt": "7.49"
+		},
+		"lastDividendValue": {
+			"raw": 0.26,
+			"fmt": "0.26"
+		},
+		"SandP52WeekChange": {
+			"raw": -0.01254642,
+			"fmt": "-1.25%"
+		},
+		"priceToBook": {
+			"raw": 8.815176,
+			"fmt": "8.82"
+		},
+		"heldPercentInsiders": {
+			"raw": 0.0033000002,
+			"fmt": "0.33%"
+		},
+		"nextFiscalYearEnd": {
+			"raw": 1698710400,
+			"fmt": "2023-10-31"
+		},
+		"yield": {},
+		"mostRecentQuarter": {
+			"raw": 1651363200,
+			"fmt": "2022-05-01"
+		},
+		"shortRatio": {
+			"raw": 1.58,
+			"fmt": "1.58"
+		},
+		"sharesShortPreviousMonthDate": {
+			"raw": 1649894400,
+			"fmt": "2022-04-14"
+		},
+		"floatShares": {
+			"raw": 866832866,
+			"fmt": "866.83M",
+			"longFmt": "866,832,866"
+		},
+		"beta": {
+			"raw": 1.437946,
+			"fmt": "1.44"
+		},
+		"enterpriseValue": {
+			"raw": 103998914560,
+			"fmt": "104B",
+			"longFmt": "103,998,914,560"
+		},
+		"priceHint": {
+			"raw": 2,
+			"fmt": "2",
+			"longFmt": "2"
+		},
+		"threeYearAverageReturn": {},
+		"lastSplitDate": {
+			"raw": 1019001600,
+			"fmt": "2002-04-17"
+		},
+		"lastSplitFactor": "2:1",
+		"legalType": null,
+		"lastDividendDate": {
+			"raw": 1653436800,
+			"fmt": "2022-05-25"
+		},
+		"morningStarOverallRating": {},
+		"earningsQuarterlyGrowth": {
+			"raw": 0.155,
+			"fmt": "15.50%"
+		},
+		"priceToSalesTrailing12Months": {},
+		"dateShortInterest": {
+			"raw": 1652400000,
+			"fmt": "2022-05-13"
+		},
+		"pegRatio": {
+			"raw": 1.11,
+			"fmt": "1.11"
+		},
+		"ytdReturn": {},
+		"forwardPE": {
+			"raw": 13.424486,
+			"fmt": "13.42"
+		},
+		"maxAge": 1,
+		"lastCapGain": {},
+		"shortPercentOfFloat": {
+			"raw": 0.014400001,
+			"fmt": "1.44%"
+		},
+		"sharesShortPriorMonth": {
+			"raw": 7979020,
+			"fmt": "7.98M",
+			"longFmt": "7,979,020"
+		},
+		"impliedSharesOutstanding": {
+			"raw": 0,
+			"fmt": null,
+			"longFmt": "0"
+		},
+		"category": null,
+		"fiveYearAverageReturn": {}
+	},
+	"financialsTemplate": {
+		"code": "N",
+		"maxAge": 1
+	},
+	"price": {
+		"quoteSourceName": "Delayed Quote",
+		"regularMarketOpen": {
+			"raw": 114.69,
+			"fmt": "114.69"
+		},
+		"averageDailyVolume3Month": {
+			"raw": 8081693,
+			"fmt": "8.08M",
+			"longFmt": "8,081,693"
+		},
+		"exchange": "NMS",
+		"regularMarketTime": 1654200005,
+		"volume24Hr": {},
+		"regularMarketDayHigh": {
+			"raw": 117.41,
+			"fmt": "117.41"
+		},
+		"shortName": "Applied Materials, Inc.",
+		"averageDailyVolume10Day": {
+			"raw": 8892520,
+			"fmt": "8.89M",
+			"longFmt": "8,892,520"
+		},
+		"longName": "Applied Materials, Inc.",
+		"regularMarketChange": {
+			"raw": 2.8700027,
+			"fmt": "2.87"
+		},
+		"currencySymbol": "$",
+		"regularMarketPreviousClose": {
+			"raw": 114.46,
+			"fmt": "114.46"
+		},
+		"postMarketTime": 1654214372,
+		"preMarketPrice": {
+			"raw": 116.52,
+			"fmt": "116.52"
+		},
+		"preMarketTime": 1654245325,
+		"exchangeDataDelayedBy": 0,
+		"toCurrency": null,
+		"postMarketChange": {
+			"raw": 0.11999512,
+			"fmt": "0.12"
+		},
+		"postMarketPrice": {
+			"raw": 117.45,
+			"fmt": "117.45"
+		},
+		"exchangeName": "NasdaqGS",
+		"preMarketChange": {
+			"raw": -0.8100052,
+			"fmt": "-0.81"
+		},
+		"circulatingSupply": {},
+		"regularMarketDayLow": {
+			"raw": 113.57,
+			"fmt": "113.57"
+		},
+		"priceHint": {
+			"raw": 2,
+			"fmt": "2",
+			"longFmt": "2"
+		},
+		"currency": "USD",
+		"regularMarketPrice": {
+			"raw": 117.33,
+			"fmt": "117.33"
+		},
+		"regularMarketVolume": {
+			"raw": 6408456,
+			"fmt": "6.41M",
+			"longFmt": "6,408,456.00"
+		},
+		"lastMarket": null,
+		"regularMarketSource": "FREE_REALTIME",
+		"openInterest": {},
+		"marketState": "PRE",
+		"underlyingSymbol": null,
+		"marketCap": {
+			"raw": 102070886400,
+			"fmt": "102.07B",
+			"longFmt": "102,070,886,400.00"
+		},
+		"quoteType": "EQUITY",
+		"preMarketChangePercent": {
+			"raw": -0.00690365,
+			"fmt": "-0.69%"
+		},
+		"volumeAllCurrencies": {},
+		"postMarketSource": "DELAYED",
+		"strikePrice": {},
+		"symbol": "AMAT",
+		"postMarketChangePercent": {
+			"raw": 0.0010227147,
+			"fmt": "0.10%"
+		},
+		"preMarketSource": "DELAYED",
+		"maxAge": 1,
+		"fromCurrency": null,
+		"regularMarketChangePercent": {
+			"raw": 0.025074286,
+			"fmt": "2.51%"
+		}
+	},
+	"financialData": {
+		"ebitdaMargins": {
+			"raw": 0.33553,
+			"fmt": "33.55%"
+		},
+		"profitMargins": {
+			"raw": 0.27203,
+			"fmt": "27.20%"
+		},
+		"grossMargins": {
+			"raw": 0.47505,
+			"fmt": "47.51%"
+		},
+		"operatingCashflow": {
+			"raw": 5906999808,
+			"fmt": "5.91B",
+			"longFmt": "5,906,999,808"
+		},
+		"revenueGrowth": {
+			"raw": 0.119,
+			"fmt": "11.90%"
+		},
+		"operatingMargins": {
+			"raw": 0.31878,
+			"fmt": "31.88%"
+		},
+		"ebitda": {
+			"raw": 8333000192,
+			"fmt": "8.33B",
+			"longFmt": "8,333,000,192"
+		},
+		"targetLowPrice": {
+			"raw": 115,
+			"fmt": "115.00"
+		},
+		"recommendationKey": "buy",
+		"grossProfits": {
+			"raw": 10926000000,
+			"fmt": "10.93B",
+			"longFmt": "10,926,000,000"
+		},
+		"freeCashflow": {
+			"raw": 3592375040,
+			"fmt": "3.59B",
+			"longFmt": "3,592,375,040"
+		},
+		"targetMedianPrice": {
+			"raw": 145,
+			"fmt": "145.00"
+		},
+		"currentPrice": {
+			"raw": 117.33,
+			"fmt": "117.33"
+		},
+		"earningsGrowth": {
+			"raw": 0.217,
+			"fmt": "21.70%"
+		},
+		"currentRatio": {
+			"raw": 2.292,
+			"fmt": "2.29"
+		},
+		"returnOnAssets": {
+			"raw": 0.19975,
+			"fmt": "19.98%"
+		},
+		"numberOfAnalystOpinions": {
+			"raw": 29,
+			"fmt": "29",
+			"longFmt": "29"
+		},
+		"targetMeanPrice": {
+			"raw": 148.35,
+			"fmt": "148.35"
+		},
+		"debtToEquity": {
+			"raw": 50.522,
+			"fmt": "50.52"
+		},
+		"returnOnEquity": {
+			"raw": 0.57322,
+			"fmt": "57.32%"
+		},
+		"targetHighPrice": {
+			"raw": 205,
+			"fmt": "205.00"
+		},
+		"totalCash": {
+			"raw": 3921999872,
+			"fmt": "3.92B",
+			"longFmt": "3,921,999,872"
+		},
+		"totalDebt": {
+			"raw": 5849999872,
+			"fmt": "5.85B",
+			"longFmt": "5,849,999,872"
+		},
+		"totalRevenue": {
+			"raw": 24835000320,
+			"fmt": "24.84B",
+			"longFmt": "24,835,000,320"
+		},
+		"totalCashPerShare": {
+			"raw": 4.508,
+			"fmt": "4.51"
+		},
+		"financialCurrency": "USD",
+		"maxAge": 86400,
+		"revenuePerShare": {
+			"raw": 27.811,
+			"fmt": "27.81"
+		},
+		"quickRatio": {
+			"raw": 1.35,
+			"fmt": "1.35"
+		},
+		"recommendationMean": {
+			"raw": 2.1,
+			"fmt": "2.10"
+		}
+	},
+	"quoteType": {
+		"exchange": "NMS",
+		"shortName": "Applied Materials, Inc.",
+		"longName": "Applied Materials, Inc.",
+		"exchangeTimezoneName": "America/New_York",
+		"exchangeTimezoneShortName": "EDT",
+		"isEsgPopulated": false,
+		"gmtOffSetMilliseconds": "-14400000",
+		"quoteType": "EQUITY",
+		"symbol": "AMAT",
+		"messageBoardId": "finmb_251230",
+		"market": "us_market"
+	},
+	"calendarEvents": {
+		"maxAge": 1,
+		"earnings": {
+			"earningsDate": [
+				{
+					"raw": 1660852800,
+					"fmt": "2022-08-18"
+				}
+			],
+			"earningsAverage": {
+				"raw": 1.79,
+				"fmt": "1.79"
+			},
+			"earningsLow": {
+				"raw": 1.75,
+				"fmt": "1.75"
+			},
+			"earningsHigh": {
+				"raw": 2.11,
+				"fmt": "2.11"
+			},
+			"revenueAverage": {
+				"raw": 6302150000,
+				"fmt": "6.3B",
+				"longFmt": "6,302,150,000"
+			},
+			"revenueLow": {
+				"raw": 6243000000,
+				"fmt": "6.24B",
+				"longFmt": "6,243,000,000"
+			},
+			"revenueHigh": {
+				"raw": 6710000000,
+				"fmt": "6.71B",
+				"longFmt": "6,710,000,000"
+			}
+		},
+		"exDividendDate": {
+			"raw": 1653436800,
+			"fmt": "2022-05-25"
+		},
+		"dividendDate": {
+			"raw": 1655337600,
+			"fmt": "2022-06-16"
+		}
+	},
+	"summaryDetail": {
+		"previousClose": {
+			"raw": 114.46,
+			"fmt": "114.46"
+		},
+		"regularMarketOpen": {
+			"raw": 114.69,
+			"fmt": "114.69"
+		},
+		"twoHundredDayAverage": {
+			"raw": 134.55286,
+			"fmt": "134.55"
+		},
+		"trailingAnnualDividendYield": {
+			"raw": 0.008736677,
+			"fmt": "0.87%"
+		},
+		"payoutRatio": {
+			"raw": 0.1283,
+			"fmt": "12.83%"
+		},
+		"volume24Hr": {},
+		"regularMarketDayHigh": {
+			"raw": 117.41,
+			"fmt": "117.41"
+		},
+		"navPrice": {},
+		"averageDailyVolume10Day": {
+			"raw": 8892520,
+			"fmt": "8.89M",
+			"longFmt": "8,892,520"
+		},
+		"totalAssets": {},
+		"regularMarketPreviousClose": {
+			"raw": 114.46,
+			"fmt": "114.46"
+		},
+		"fiftyDayAverage": {
+			"raw": 117.2418,
+			"fmt": "117.24"
+		},
+		"trailingAnnualDividendRate": {
+			"raw": 1,
+			"fmt": "1.00"
+		},
+		"open": {
+			"raw": 114.69,
+			"fmt": "114.69"
+		},
+		"toCurrency": null,
+		"averageVolume10days": {
+			"raw": 8892520,
+			"fmt": "8.89M",
+			"longFmt": "8,892,520"
+		},
+		"expireDate": {},
+		"yield": {},
+		"algorithm": null,
+		"dividendRate": {
+			"raw": 0.98,
+			"fmt": "0.98"
+		},
+		"exDividendDate": {
+			"raw": 1653436800,
+			"fmt": "2022-05-25"
+		},
+		"beta": {
+			"raw": 1.437946,
+			"fmt": "1.44"
+		},
+		"circulatingSupply": {},
+		"startDate": {},
+		"regularMarketDayLow": {
+			"raw": 113.57,
+			"fmt": "113.57"
+		},
+		"priceHint": {
+			"raw": 2,
+			"fmt": "2",
+			"longFmt": "2"
+		},
+		"currency": "USD",
+		"trailingPE": {
+			"raw": 15.669071,
+			"fmt": "15.67"
+		},
+		"regularMarketVolume": {
+			"raw": 6408456,
+			"fmt": "6.41M",
+			"longFmt": "6,408,456"
+		},
+		"lastMarket": null,
+		"maxSupply": {},
+		"openInterest": {},
+		"marketCap": {
+			"raw": 102070886400,
+			"fmt": "102.07B",
+			"longFmt": "102,070,886,400"
+		},
+		"volumeAllCurrencies": {},
+		"strikePrice": {},
+		"averageVolume": {
+			"raw": 8081693,
+			"fmt": "8.08M",
+			"longFmt": "8,081,693"
+		},
+		"priceToSalesTrailing12Months": {
+			"raw": 4.109961,
+			"fmt": "4.11"
+		},
+		"dayLow": {
+			"raw": 113.57,
+			"fmt": "113.57"
+		},
+		"ask": {
+			"raw": 118.05,
+			"fmt": "118.05"
+		},
+		"ytdReturn": {},
+		"askSize": {
+			"raw": 3000,
+			"fmt": "3k",
+			"longFmt": "3,000"
+		},
+		"volume": {
+			"raw": 6408456,
+			"fmt": "6.41M",
+			"longFmt": "6,408,456"
+		},
+		"fiftyTwoWeekHigh": {
+			"raw": 167.06,
+			"fmt": "167.06"
+		},
+		"forwardPE": {
+			"raw": 13.424486,
+			"fmt": "13.42"
+		},
+		"maxAge": 1,
+		"fromCurrency": null,
+		"fiveYearAvgDividendYield": {
+			"raw": 1.18,
+			"fmt": "1.18"
+		},
+		"fiftyTwoWeekLow": {
+			"raw": 101.33,
+			"fmt": "101.33"
+		},
+		"bid": {
+			"raw": 115.5,
+			"fmt": "115.50"
+		},
+		"tradeable": false,
+		"dividendYield": {
+			"raw": 0.0084,
+			"fmt": "0.84%"
+		},
+		"bidSize": {
+			"raw": 1300,
+			"fmt": "1.3k",
+			"longFmt": "1,300"
+		},
+		"dayHigh": {
+			"raw": 117.41,
+			"fmt": "117.41"
+		}
+	},
+	"symbol": "AMAT",
+	"pageViews": {
+		"shortTermTrend": "UP",
+		"midTermTrend": "UP",
+		"longTermTrend": "UP",
+		"maxAge": 1
+	},
+	"quoteData": {
+		"AMAT": {
+			"sourceInterval": 15,
+			"quoteSourceName": "Delayed Quote",
+			"regularMarketOpen": {
+				"raw": 114.69,
+				"fmt": "114.69"
+			},
+			"exchange": "NMS",
+			"regularMarketTime": {
+				"raw": 1654200005,
+				"fmt": "4:00PM EDT"
+			},
+			"fiftyTwoWeekRange": {
+				"raw": "101.33 - 167.06",
+				"fmt": "101.33 - 167.06"
+			},
+			"sharesOutstanding": {
+				"raw": 869947008,
+				"fmt": "869.947M",
+				"longFmt": "869,947,008"
+			},
+			"regularMarketDayHigh": {
+				"raw": 117.41,
+				"fmt": "117.41"
+			},
+			"shortName": "Applied Materials, Inc.",
+			"longName": "Applied Materials, Inc.",
+			"exchangeTimezoneName": "America/New_York",
+			"regularMarketChange": {
+				"raw": 2.8700027,
+				"fmt": "2.87"
+			},
+			"regularMarketPreviousClose": {
+				"raw": 114.46,
+				"fmt": "114.46"
+			},
+			"fiftyTwoWeekHighChange": {
+				"raw": -49.729996,
+				"fmt": "-49.73"
+			},
+			"exchangeTimezoneShortName": "EDT",
+			"fiftyTwoWeekLowChange": {
+				"raw": 16,
+				"fmt": "16.00"
+			},
+			"exchangeDataDelayedBy": 0,
+			"customPriceAlertConfidence": "HIGH",
+			"regularMarketDayLow": {
+				"raw": 113.57,
+				"fmt": "113.57"
+			},
+			"priceHint": 2,
+			"currency": "USD",
+			"regularMarketPrice": {
+				"raw": 117.33,
+				"fmt": "117.33"
+			},
+			"regularMarketVolume": {
+				"raw": 6408456,
+				"fmt": "6.408M",
+				"longFmt": "6,408,456"
+			},
+			"isLoading": false,
+			"triggerable": true,
+			"gmtOffSetMilliseconds": -14400000,
+			"firstTradeDateMilliseconds": 322151400000,
+			"region": "US",
+			"marketState": "PRE",
+			"marketCap": {
+				"raw": 102070886400,
+				"fmt": "102.071B",
+				"longFmt": "102,070,886,400"
+			},
+			"quoteType": "EQUITY",
+			"invalid": false,
+			"symbol": "AMAT",
+			"language": "en-US",
+			"fiftyTwoWeekLowChangePercent": {
+				"raw": 0.15789993,
+				"fmt": "15.79%"
+			},
+			"regularMarketDayRange": {
+				"raw": "113.57 - 117.41",
+				"fmt": "113.57 - 117.41"
+			},
+			"messageBoardId": "finmb_251230",
+			"fiftyTwoWeekHigh": {
+				"raw": 167.06,
+				"fmt": "167.06"
+			},
+			"fiftyTwoWeekHighChangePercent": {
+				"raw": -0.29767746,
+				"fmt": "-29.77%"
+			},
+			"uuid": "58114a02-d74c-3082-9d47-779374f1ba6b",
+			"market": "us_market",
+			"fiftyTwoWeekLow": {
+				"raw": 101.33,
+				"fmt": "101.33"
+			},
+			"typeDisp": "Equity",
+			"regularMarketChangePercent": {
+				"raw": 2.5074286,
+				"fmt": "2.51%"
+			},
+			"fullExchangeName": "NasdaqGS",
+			"tradeable": false
+		}
+	},
+	"mktmData": {},
+	"timeSeries": {
+		"quarterlyPeRatio": [
+			{
+				"dataId": 14008,
+				"asOfDate": "2021-04-30",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 31.748804,
+					"fmt": "31.75"
+				}
+			},
+			{
+				"dataId": 14008,
+				"asOfDate": "2021-07-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 29.152083,
+					"fmt": "29.15"
+				}
+			},
+			{
+				"dataId": 14008,
+				"asOfDate": "2021-10-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 23.765217,
+					"fmt": "23.77"
+				}
+			},
+			{
+				"dataId": 14008,
+				"asOfDate": "2022-01-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 21.590625,
+					"fmt": "21.59"
+				}
+			},
+			{
+				"dataId": 14008,
+				"asOfDate": "2022-04-30",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 15.369081,
+					"fmt": "15.37"
+				}
+			}
+		],
+		"trailingEnterprisesValueEBITDARatio": [
+			{
+				"dataId": 102,
+				"asOfDate": "2022-05-23",
+				"periodType": "TTM",
+				"reportedValue": {
+					"raw": 11.171757,
+					"fmt": "11.17"
+				}
+			}
+		],
+		"trailingPbRatio": [
+			{
+				"dataId": 14012,
+				"asOfDate": "2022-05-20",
+				"periodType": "TTM",
+				"reportedValue": {
+					"raw": 7.909688,
+					"fmt": "7.91"
+				}
+			}
+		],
+		"quarterlyPegRatio": [
+			{
+				"dataId": 14021,
+				"asOfDate": "2021-04-30",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 1.7734,
+					"fmt": "1.77"
+				}
+			},
+			{
+				"dataId": 14021,
+				"asOfDate": "2021-07-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 1.2221,
+					"fmt": "1.22"
+				}
+			},
+			{
+				"dataId": 14021,
+				"asOfDate": "2021-10-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 1.0819,
+					"fmt": "1.08"
+				}
+			},
+			{
+				"dataId": 14021,
+				"asOfDate": "2022-01-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 1.9463,
+					"fmt": "1.95"
+				}
+			},
+			{
+				"dataId": 14021,
+				"asOfDate": "2022-04-30",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 1.6591,
+					"fmt": "1.66"
+				}
+			}
+		],
+		"trailingForwardPeRatio": [
+			{
+				"dataId": 14020,
+				"asOfDate": "2022-05-20",
+				"periodType": "TTM",
+				"reportedValue": {
+					"raw": 13.1234,
+					"fmt": "13.12"
+				}
+			}
+		],
+		"quarterlyPsRatio": [
+			{
+				"dataId": 14010,
+				"asOfDate": "2021-04-30",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 6.725908,
+					"fmt": "6.73"
+				}
+			},
+			{
+				"dataId": 14010,
+				"asOfDate": "2021-07-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 6.517645,
+					"fmt": "6.52"
+				}
+			},
+			{
+				"dataId": 14010,
+				"asOfDate": "2021-10-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 5.826959,
+					"fmt": "5.83"
+				}
+			},
+			{
+				"dataId": 14010,
+				"asOfDate": "2022-01-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 5.50611,
+					"fmt": "5.51"
+				}
+			},
+			{
+				"dataId": 14010,
+				"asOfDate": "2022-04-30",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 4.163462,
+					"fmt": "4.16"
+				}
+			}
+		],
+		"trailingMarketCap": [
+			{
+				"dataId": 40001,
+				"asOfDate": "2022-05-20",
+				"periodType": "TTM",
+				"reportedValue": {
+					"raw": 94046193267,
+					"fmt": "94.05B"
+				}
+			}
+		],
+		"quarterlyMarketCap": [
+			{
+				"dataId": 40001,
+				"asOfDate": "2021-04-30",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 121782769014,
+					"fmt": "121.78B"
+				}
+			},
+			{
+				"dataId": 40001,
+				"asOfDate": "2021-07-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 127893327187,
+					"fmt": "127.89B"
+				}
+			},
+			{
+				"dataId": 40001,
+				"asOfDate": "2021-10-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 123385179525,
+					"fmt": "123.39B"
+				}
+			},
+			{
+				"dataId": 40001,
+				"asOfDate": "2022-01-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 122067471217,
+					"fmt": "122.07B"
+				}
+			},
+			{
+				"dataId": 40001,
+				"asOfDate": "2022-04-30",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 97482598413,
+					"fmt": "97.48B"
+				}
+			}
+		],
+		"quarterlyEnterprisesValueRevenueRatio": [
+			{
+				"dataId": 101,
+				"asOfDate": "2021-04-30",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 21.651338,
+					"fmt": "21.65"
+				}
+			},
+			{
+				"dataId": 101,
+				"asOfDate": "2021-07-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 20.469872,
+					"fmt": "20.47"
+				}
+			},
+			{
+				"dataId": 101,
+				"asOfDate": "2021-10-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 20.021914,
+					"fmt": "20.02"
+				}
+			},
+			{
+				"dataId": 101,
+				"asOfDate": "2022-01-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 19.512274,
+					"fmt": "19.51"
+				}
+			},
+			{
+				"dataId": 101,
+				"asOfDate": "2022-04-30",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 15.612906,
+					"fmt": "15.61"
+				}
+			}
+		],
+		"quarterlyEnterprisesValueEBITDARatio": [
+			{
+				"dataId": 102,
+				"asOfDate": "2021-04-30",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 70.967568,
+					"fmt": "70.97"
+				}
+			},
+			{
+				"dataId": 102,
+				"asOfDate": "2021-07-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 59.405774,
+					"fmt": "59.41"
+				}
+			},
+			{
+				"dataId": 102,
+				"asOfDate": "2021-10-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 56.547131,
+					"fmt": "56.55"
+				}
+			},
+			{
+				"dataId": 102,
+				"asOfDate": "2022-01-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 58.714717,
+					"fmt": "58.71"
+				}
+			},
+			{
+				"dataId": 102,
+				"asOfDate": "2022-04-30",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 47.95996,
+					"fmt": "47.96"
+				}
+			}
+		],
+		"trailingPegRatio": [
+			{
+				"dataId": 14021,
+				"asOfDate": "2022-05-20",
+				"periodType": "TTM",
+				"reportedValue": {
+					"raw": 1.6007,
+					"fmt": "1.60"
+				}
+			}
+		],
+		"quarterlyEnterpriseValue": [
+			{
+				"dataId": 40002,
+				"asOfDate": "2021-04-30",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 120857769014,
+					"fmt": "120.86B"
+				}
+			},
+			{
+				"dataId": 40002,
+				"asOfDate": "2021-07-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 126831327187,
+					"fmt": "126.83B"
+				}
+			},
+			{
+				"dataId": 40002,
+				"asOfDate": "2021-10-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 122594179525,
+					"fmt": "122.59B"
+				}
+			},
+			{
+				"dataId": 40002,
+				"asOfDate": "2022-01-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 122361471217,
+					"fmt": "122.36B"
+				}
+			},
+			{
+				"dataId": 40002,
+				"asOfDate": "2022-04-30",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 97502598413,
+					"fmt": "97.50B"
+				}
+			}
+		],
+		"trailingPeRatio": [
+			{
+				"dataId": 14008,
+				"asOfDate": "2022-05-20",
+				"periodType": "TTM",
+				"reportedValue": {
+					"raw": 14.827298,
+					"fmt": "14.83"
+				}
+			}
+		],
+		"trailingEnterprisesValueRevenueRatio": [
+			{
+				"dataId": 101,
+				"asOfDate": "2022-05-23",
+				"periodType": "TTM",
+				"reportedValue": {
+					"raw": 3.787646,
+					"fmt": "3.79"
+				}
+			}
+		],
+		"quarterlyPbRatio": [
+			{
+				"dataId": 14012,
+				"asOfDate": "2021-04-30",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 10.614728,
+					"fmt": "10.61"
+				}
+			},
+			{
+				"dataId": 14012,
+				"asOfDate": "2021-07-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 10.663998,
+					"fmt": "10.66"
+				}
+			},
+			{
+				"dataId": 14012,
+				"asOfDate": "2021-10-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 10.107114,
+					"fmt": "10.11"
+				}
+			},
+			{
+				"dataId": 14012,
+				"asOfDate": "2022-01-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 9.967132,
+					"fmt": "9.97"
+				}
+			},
+			{
+				"dataId": 14012,
+				"asOfDate": "2022-04-30",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 8.198705,
+					"fmt": "8.20"
+				}
+			}
+		],
+		"trailingPsRatio": [
+			{
+				"dataId": 14010,
+				"asOfDate": "2022-05-20",
+				"periodType": "TTM",
+				"reportedValue": {
+					"raw": 4.016694,
+					"fmt": "4.02"
+				}
+			}
+		],
+		"trailingEnterpriseValue": [
+			{
+				"dataId": 40002,
+				"asOfDate": "2022-05-20",
+				"periodType": "TTM",
+				"reportedValue": {
+					"raw": 94066193267,
+					"fmt": "94.07B"
+				}
+			}
+		],
+		"quarterlyForwardPeRatio": [
+			{
+				"dataId": 14020,
+				"asOfDate": "2021-04-30",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 22.2222,
+					"fmt": "22.22"
+				}
+			},
+			{
+				"dataId": 14020,
+				"asOfDate": "2021-07-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 18.8324,
+					"fmt": "18.83"
+				}
+			},
+			{
+				"dataId": 14020,
+				"asOfDate": "2021-10-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 17.4216,
+					"fmt": "17.42"
+				}
+			},
+			{
+				"dataId": 14020,
+				"asOfDate": "2022-01-31",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 16.9205,
+					"fmt": "16.92"
+				}
+			},
+			{
+				"dataId": 14020,
+				"asOfDate": "2022-04-30",
+				"periodType": "3M",
+				"reportedValue": {
+					"raw": 13.6054,
+					"fmt": "13.61"
+				}
+			}
+		],
+		"timestamp": [
+			1619740800,
+			1627689600,
+			1635638400,
+			1643587200,
+			1651276800
+		]
+	},
+	"meta": {
+		"symbol": "AMAT",
+		"start": 493590046,
+		"end": 1654247857,
+		"timeUnit": "quarterly"
+	},
+	"loading": false,
+	"errorList": []
+}

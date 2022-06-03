@@ -72,7 +72,7 @@ function Chart() {
           <Tab label="1Y" />
           <Tab label="2Y" />
           <Tab label="5Y" />
-          <Tab label="Max" />
+          <Tab label="15Y" />
         </Tabs>
       </Box>
       <Outlet />
