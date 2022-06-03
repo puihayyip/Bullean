@@ -1,32 +1,11 @@
-import React, { useEffect, useState, useContext } from "react";
+import React from "react";
 import OneDayChart from "./OneDayChart";
 import data from "../../sampleAPIs/CompanyOverview.json";
-import { stateContext } from "../../App";
 
 function Summary({ dailyShares, overview }) {
   const numeral = require("numeral");
-  const [state, setState] = useContext(stateContext);
-
   // const overview = data;
   const sharesObj = dailyShares?.["Time Series (Daily)"];
-
-  const ticker = state.selectedTicker;
-
-  const APIKEY = process.env.REACT_APP_LOGOAPIKEY;
-  const URL = `https://cloud.iexapis.com/stable/stock/${ticker}/intraday-prices?token=${APIKEY}`;
-  // const URL = `https://cloud.iexapis.com/stable/stock/${ticker}/intraday-prices?chartInterval=5&token=${APIKEY}`;
-
-  async function fetchData() {
-    const res = await fetch(URL);
-    const data = await res.json();
-    setState({ ...state, intradayData: data });
-  }
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-  const intraData = state.intradayData;
-
   if (sharesObj === null || sharesObj === undefined) {
     return null;
   }
@@ -40,14 +19,10 @@ function Summary({ dailyShares, overview }) {
   return (
     <div className="container">
       <h1>Summary</h1>
-      <div
-        style={{
-          display: "flex",
-          gap: "30px",
-          justifyContent: "space-between",
-        }}
-      >
-        <div style={{ display: "flex", gap: "30px" }}>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{ display: "flex", gap: "30px", justifyItems: "spaceAround" }}
+        >
           <div>
             <p>Previous Close: </p>
             <p>Open:</p>
@@ -88,7 +63,8 @@ function Summary({ dailyShares, overview }) {
         <div
           style={{
             display: "flex",
-            gap: "30px",
+            justifyItems: "spaceAround",
+            marginLeft: "70px",
           }}
         >
           <div>
@@ -99,7 +75,7 @@ function Summary({ dailyShares, overview }) {
             <p>Ex-dividend date</p>
             <p>1y target est</p>
           </div>
-          <div>
+          <div style={{ marginLeft: "30px" }}>
             <p>{overview.Beta}</p>
             <p>{overview.TrailingPE}</p>
             <p>{overview.LatestQuarter}</p>
@@ -111,8 +87,8 @@ function Summary({ dailyShares, overview }) {
             <p>{overview.AnalystTargetPrice}</p>
           </div>
         </div>
-        <div style={{ paddingBottom: "10px" }}>
-          <OneDayChart intraData={intraData} />
+        <div style={{ marginLeft: "80px", paddingBottom: "10px" }}>
+          <OneDayChart />
         </div>
       </div>
     </div>
