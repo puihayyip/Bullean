@@ -9,7 +9,7 @@ import Confetti from "react-confetti";
 
 function ScamPage() {
   const { width, height } = useWindowSize();
-  const [time, setTime] = useState(120);
+  const [time, setTime] = useState(90);
   const [explode, setExplode] = useState(false);
   const [pass, setPass] = useState(false);
   const childrenYay = new Audio(yay);
