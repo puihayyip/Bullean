@@ -2,7 +2,7 @@
 .RightSide > div {
   display: flex;
   justify-content: space-between;
-  gap: 200px;
+  gap: 150px;
   border-bottom: rgba(128, 128, 128, 0.3) 1px solid;
 }
 
