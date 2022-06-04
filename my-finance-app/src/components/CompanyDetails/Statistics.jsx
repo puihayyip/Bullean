@@ -41,31 +41,31 @@ function Statistics() {
           <h2>Valuation measures</h2>
           <div>
             <p>Markey cap (intra-day)</p>
-            <p>{state.companySummary?.timeSeries?.trailingMarketCap.at(-1).reportedValue.fmt}</p>
+            <p>{state.companySummary?.timeSeries?.trailingMarketCap.at(-1)?.reportedValue.fmt}</p>
           </div>
           <div>
             <p>Enterprise value</p>
-            <p>{state.companySummary?.timeSeries?.trailingEnterpriseValue.at(-1).reportedValue.fmt}</p>
+            <p>{state.companySummary?.timeSeries?.trailingEnterpriseValue.at(-1)?.reportedValue.fmt}</p>
           </div>
           <div>
             <p>Trailing P/E</p>
-            <p>{state.companySummary?.timeSeries?.trailingPeRatio.at(-1).reportedValue.fmt}</p>
+            <p>{state.companySummary?.timeSeries?.trailingPeRatio.at(-1)?.reportedValue.fmt}</p>
           </div>
           <div>
             <p>Forward P/E</p>
-            <p>{state.companySummary?.timeSeries?.trailingForwardPeRatio.at(-1).reportedValue.fmt}</p>
+            <p>{state.companySummary?.timeSeries?.trailingForwardPeRatio.at(-1)?.reportedValue.fmt}</p>
           </div>
           <div>
             <p>PEG Ratio (5 yr expected) </p>
-            <p>{state.companySummary?.timeSeries?.trailingPegRatio.at(-1).reportedValue.fmt}</p>
+            <p>{state.companySummary?.timeSeries?.trailingPegRatio.at(-1)?.reportedValue.fmt}</p>
           </div>
           <div>
             <p>Price/sales (ttm) </p>
-            <p>{state.companySummary?.timeSeries?.trailingPsRatio.at(-1).reportedValue.fmt}</p>
+            <p>{state.companySummary?.timeSeries?.trailingPsRatio.at(-1)?.reportedValue.fmt}</p>
           </div>
           <div>
             <p>Price/book (mrq) </p>
-            <p>{state.companySummary?.timeSeries?.trailingPbRatio.at(-1).reportedValue.fmt}</p>
+            <p>{state.companySummary?.timeSeries?.trailingPbRatio.at(-1)?.reportedValue.fmt}</p>
           </div>
           <div>
             <p>Enterprise value/revenue </p>
@@ -84,7 +84,7 @@ function Statistics() {
           </div>
           <div>
             <p>Most-recent quarter (mrq) </p>
-            <p>{state.companySummary?.timeSeries?.quarterlyPeRatio.at(-1).asOfDate}</p>
+            <p>{state.companySummary?.timeSeries?.quarterlyPeRatio.at(-1)?.asOfDate}</p>
           </div>
           <h3>Profitability</h3>
           <div>
