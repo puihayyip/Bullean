@@ -260,11 +260,19 @@ function Statistics() {
           <h3>Dividends & splits</h3>
           <div>
             <p>Forward annual dividend rate </p>
-            <p>{state.companySummary?.summaryDetail?.dividendRate.fmt}</p>
+            <p>
+              {state.companySummary?.summaryDetail?.dividendRate.fmt
+                ? state.companySummary?.summaryDetail?.dividendRate.fmt
+                : "N/A"}
+            </p>
           </div>
           <div>
             <p>Forward annual dividend yield </p>
-            <p>{state.companySummary?.summaryDetail?.dividendYield.fmt}</p>
+            <p>
+              {state.companySummary?.summaryDetail?.dividendYield.fmt
+                ? state.companySummary?.summaryDetail?.dividendYield.fmt
+                : "N/A"}
+            </p>
           </div>
           <div>
             <p>Trailing annual dividend rate </p>
@@ -288,19 +296,35 @@ function Statistics() {
           </div>
           <div>
             <p>Dividend date </p>
-            <p>{state.companySummary?.calendarEvents?.dividendDate.fmt}</p>
+            <p>
+              {state.companySummary?.calendarEvents?.dividendDate.fmt
+                ? state.companySummary?.calendarEvents?.dividendDate.fmt
+                : "N/A"}
+            </p>
           </div>
           <div>
             <p>Ex-dividend date</p>
-            <p>{state.companySummary?.calendarEvents?.exDividendDate.fmt}</p>
+            <p>
+              {state.companySummary?.calendarEvents?.exDividendDate.fmt
+                ? state.companySummary?.calendarEvents?.exDividendDate.fmt
+                : "N/A"}
+            </p>
           </div>
           <div>
             <p>Last split factor</p>
-            <p>{state.companySummary?.defaultKeyStatistics?.lastSplitFactor}</p>
+            <p>
+              {state.companySummary?.defaultKeyStatistics?.lastSplitFactor
+                ? state.companySummary?.defaultKeyStatistics?.lastSplitFactor
+                : "N/A"}
+            </p>
           </div>
           <div>
             <p>Last split date</p>
-            <p>{state.companySummary?.defaultKeyStatistics?.lastSplitDate.fmt}</p>
+            <p>
+              {state.companySummary?.defaultKeyStatistics?.lastSplitDate.fmt
+                ? state.companySummary?.defaultKeyStatistics?.lastSplitDate.fmt
+                : "N/A"}
+            </p>
           </div>
         </div>
       </div>
