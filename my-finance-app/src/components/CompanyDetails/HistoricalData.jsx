@@ -1,19 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { stateContext } from "../../App";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import Button from "@mui/material/Button";
+import HistoricalDataCards from "./HistoricalDataCards";
+import { data } from "jquery";
 
 function HistoricalData() {
-  const [range, setRange] = useState("1Y");
-  const [frequency, setFrequency] = useState("daily");
+  const [state, setState] = useContext(stateContext);
+  const ticker = state.selectedTicker;
+  const [range, setRange] = useState("1y");
+  const [frequency, setFrequency] = useState("1d");
   const [date, setDate] = useState({
     startDate: "",
     endDate: "",
     disableCheck: false,
   });
-  console.log("date", date);
 
   let today = new Date();
   today.setDate(today.getDate() + 1);
@@ -27,20 +31,37 @@ function HistoricalData() {
     }
   }, [date.endDate]);
 
+  const APIKEY = process.env.REACT_APP_RAPIDAPIKEY;
   const handleSubmit = () => {
-    console.log("clicked");
     const options = {
-      method: 'GET',
+      method: "GET",
       headers: {
-        'X-RapidAPI-Host': 'yh-finance.p.rapidapi.com',
-        'X-RapidAPI-Key': '6928f5c758msh38e57a42f7a523bp1d55b7jsn77a5edf7efb7'
-      }
+        "X-RapidAPI-Host": "yh-finance.p.rapidapi.com",
+        "X-RapidAPI-Key": `${APIKEY}`,
+      },
     };
-    
-    fetch('https://yh-finance.p.rapidapi.com/stock/v3/get-chart?interval=1d&symbol=AMAT&range=10y&region=US&includePrePost=false&useYfid=true&includeAdjustedClose=true&events=capitalGain%2Cdiv%2Csplit', options)
-      .then(response => response.json())
-      .then(response => console.log(response))
-      .catch(err => console.error(err));
+
+    if (!date.disableCheck) {
+      fetch(
+        `https://yh-finance.p.rapidapi.com/stock/v3/get-chart?interval=${frequency}&symbol=${ticker}&range=${range}&region=US&includePrePost=false&useYfid=true&includeAdjustedClose=true&events=capitalGain%2Cdiv%2Csplit`,
+        options
+      )
+        .then((response) => response.json())
+        .then((response) => setState({ ...state, historicalData: response }))
+        .catch((err) => console.error(err));
+    } else {
+      let period1 = new Date(date.startDate);
+      period1 = period1.getTime() / 1000;
+      let period2 = new Date(date.endDate);
+      period2 = period2.getTime() / 1000;
+      fetch(
+        `https://yh-finance.p.rapidapi.com/stock/v3/get-chart?interval=${frequency}&symbol=${ticker}&period1=${period1}&period2=${period2}&region=US&includePrePost=false&useYfid=true&includeAdjustedClose=true&events=capitalGain%2Cdiv%2Csplit`,
+        options
+      )
+        .then((response) => response.json())
+        .then((response) => setState({ ...state, historicalData: response }))
+        .catch((err) => console.error(err));
+    }
   };
 
   return (
@@ -57,14 +78,14 @@ function HistoricalData() {
               setRange(e.target.value);
             }}
           >
-            <MenuItem value={"1D"}>1D</MenuItem>
-            <MenuItem value={"5D"}>5D</MenuItem>
-            <MenuItem value={"3M"}>3M</MenuItem>
-            <MenuItem value={"6M"}>6M</MenuItem>
-            <MenuItem value={"YTD"}>YTD</MenuItem>
-            <MenuItem value={"1Y"}>1Y</MenuItem>
-            <MenuItem value={"5Y"}>5Y</MenuItem>
-            <MenuItem value={"10Y"}>10Y</MenuItem>
+            <MenuItem value={"1d"}>1D</MenuItem>
+            <MenuItem value={"5d"}>5D</MenuItem>
+            <MenuItem value={"3mo"}>3M</MenuItem>
+            <MenuItem value={"6mo"}>6M</MenuItem>
+            <MenuItem value={"ytd"}>YTD</MenuItem>
+            <MenuItem value={"1y"}>1Y</MenuItem>
+            <MenuItem value={"5y"}>5Y</MenuItem>
+            <MenuItem value={"10y"}>10Y</MenuItem>
           </Select>
         </FormControl>
         <h4>Or</h4>
@@ -100,15 +121,19 @@ function HistoricalData() {
               setFrequency(e.target.value);
             }}
           >
-            <MenuItem value={"daily"}>Daily</MenuItem>
-            <MenuItem value={"weekly"}>Weekly</MenuItem>
-            <MenuItem value={"monthly"}>Monthly</MenuItem>
+            <MenuItem value={"1d"}>Daily</MenuItem>
+            <MenuItem value={"1wk"}>Weekly</MenuItem>
+            <MenuItem value={"1mo"}>Monthly</MenuItem>
           </Select>
         </FormControl>
 
         <Button variant="contained" onClick={handleSubmit} style={{ maxHeight: "35px ", alignSelf: "center" }}>
           Apply
         </Button>
+      </div>
+      <br />
+      <div>
+        <HistoricalDataCards data={state.historicalData} />
       </div>
     </>
   );

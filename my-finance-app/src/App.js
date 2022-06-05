@@ -33,6 +33,8 @@ function App() {
     companyData: {},
     dailyShares: {},
     chartData: {},
+    statistics: {},
+    historicalData: {},
   });
   console.log(state);
 
@@ -48,12 +50,7 @@ function App() {
             <Route path="/" element={<Search />}>
               <Route
                 path="Summary"
-                element={
-                  <Summary
-                    overview={state.companyData}
-                    dailyShares={state.dailyShares}
-                  />
-                }
+                element={<Summary overview={state.companyData} dailyShares={state.dailyShares} />}
               />
               <Route path="Chart" element={<Charts />}>
                 <Route path="OneDayChart" element={<OneDayChart />} />
