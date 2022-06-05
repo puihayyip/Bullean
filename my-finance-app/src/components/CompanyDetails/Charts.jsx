@@ -12,34 +12,34 @@ function Chart() {
     setSelectedTab(newValue);
     switch (newValue) {
       case 0:
-        goTo("Chart/OneDayChart");
+        goTo("OneDayChart");
         break;
       case 1:
-        goTo("Chart/FiveDayChart");
+        goTo("FiveDayChart");
         break;
       case 2:
-        goTo("Chart/OneMonthChart");
+        goTo("OneMonthChart");
         break;
       case 3:
-        goTo("Chart/ThreeMonthChart");
+        goTo("ThreeMonthChart");
         break;
       case 4:
-        goTo("Chart/SixMonthChart");
+        goTo("SixMonthChart");
         break;
       case 5:
-        goTo("Chart/YTDChart");
+        goTo("YTDChart");
         break;
       case 6:
-        goTo("Chart/OneYearChart");
+        goTo("OneYearChart");
         break;
       case 7:
-        goTo("Chart/TwoYearChart");
+        goTo("TwoYearChart");
         break;
       case 8:
-        goTo("Chart/FiveYearChart");
+        goTo("FiveYearChart");
         break;
       case 9:
-        goTo("Chart/MaxChart");
+        goTo("MaxChart");
         break;
       default:
         return;
