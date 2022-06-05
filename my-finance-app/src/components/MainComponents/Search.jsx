@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 // import searchResults from "../../sampleAPIs/SearchEndpoint.json";
 import { useNavigate } from "react-router-dom";
+import { stateContext } from "../../App";
 
+import Button from "@mui/material/Button";
 import Cards from "./Cards";
 import LoadingScreen from "./LoadingScreen";
 import CompanyOverview from "./CompanyOverview";
@@ -9,6 +11,7 @@ import ScrollToTopBtn from "./ScrollToTopBtn";
 
 function Search() {
   const APIKEY3 = process.env.REACT_APP_APIKEY3;
+  const [state, setState] = useContext(stateContext);
   const [search, setSearch] = useState("");
   const [result, setResult] = useState({ bestMatches: [] });
   const [loading, setLoading] = useState("");
@@ -29,6 +32,14 @@ function Search() {
     setLoading("loading");
     goTo("/");
     fetchData();
+    setState({
+      ...state,
+      companyData: {},
+      dailyShares: {},
+      chartData: {},
+      statistics: {},
+      historicalData: {},
+    });
   };
 
   if (loading === "loading") {
@@ -45,8 +56,9 @@ function Search() {
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
+          style={{ padding: "10px 10px", borderRadius: "5px", marginRight: "10px" }}
         />
-        <button type="submit">Submit</button>
+        <Button variant="outlined">Submit</Button>
       </form>
       <br />
       <div style={{ display: "flex", gap: "2%", alignItems: "flex-start" }}>

@@ -14,3 +14,46 @@
 .container {
   padding: 2px 16px;
 }
+
+.gridCard {
+  display: grid;
+  grid-template-areas:
+    "name name price change"
+    "ticker ticker blank trash";
+  gap: 10px 0;
+  padding: 20px;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+.ticker {
+  grid-area: ticker;
+}
+
+.name {
+  grid-area: name;
+}
+
+.trash {
+  grid-area: trash;
+  align-self: end;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.Change {
+  grid-area: change;
+  justify-self: center;
+}
+
+.price {
+  grid-area: price;
+}
+
+.more {
+  grid-area: more;
+  position: absolute;
+  /* align-self: end;
+  justify-self: end; */
+}

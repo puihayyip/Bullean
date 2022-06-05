@@ -1,9 +1,11 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./Statistics.module.css";
 import { stateContext } from "../../App";
+import LoadingScreen from "../MainComponents/LoadingScreen";
 
 function Statistics() {
   const [state, setState] = useContext(stateContext);
+  const [loading, setLoading] = useState("loading");
   const ticker = state.selectedTicker;
   const APIKEY = process.env.REACT_APP_RAPIDAPIKEY;
   const options = {
@@ -15,17 +17,19 @@ function Statistics() {
   };
 
   async function fetchData() {
-    const res = await fetch(
-      `https://yh-finance.p.rapidapi.com/stock/v2/get-statistics?symbol=${ticker}&region=US`,
-      options
-    );
+    const res = await fetch(`https://yh-finance.p.rapidapi.com/stock/v2/get-statistics?symbol=${ticker}&region=US`, options);
     const data = await res.json();
     setState({ ...state, statistics: data });
+    setLoading("ran");
   }
 
   useEffect(() => {
     fetchData();
   }, []);
+
+  if (loading === "loading") {
+    return <LoadingScreen />;
+  }
 
   return (
     <>
@@ -135,7 +139,11 @@ function Statistics() {
           </div>
           <div>
             <p>Quarterly earnings growth (yoy) </p>
-            <p>{state.statistics?.defaultKeyStatistics?.earningsQuarterlyGrowth.fmt}</p>
+            <p>
+              {state.statistics?.defaultKeyStatistics?.earningsQuarterlyGrowth.fmt
+                ? state.statistics?.defaultKeyStatistics?.earningsQuarterlyGrowth.fmt
+                : "N/A"}
+            </p>
           </div>
           <h3>Balance sheet</h3>
           <div>
@@ -247,7 +255,7 @@ function Statistics() {
           </div>
           <div>
             <p>Short % of float (12 May 2022) </p>
-            <p>{state.statistics?.defaultKeyStatistics?.shortPercentOfFloat.fmt}</p>
+            <p>{state.statistics?.defaultKeyStatistics?.shortPercentOfFloat.fmt ? state.statistics?.defaultKeyStatistics?.shortPercentOfFloat.fmt : "N/A"}</p>
           </div>
           <div>
             <p>Short % of shares outstanding (12 May 2022)</p>
@@ -260,19 +268,11 @@ function Statistics() {
           <h3>Dividends & splits</h3>
           <div>
             <p>Forward annual dividend rate </p>
-            <p>
-              {state.statistics?.summaryDetail?.dividendRate.fmt
-                ? state.statistics?.summaryDetail?.dividendRate.fmt
-                : "N/A"}
-            </p>
+            <p>{state.statistics?.summaryDetail?.dividendRate.fmt ? state.statistics?.summaryDetail?.dividendRate.fmt : "N/A"}</p>
           </div>
           <div>
             <p>Forward annual dividend yield </p>
-            <p>
-              {state.statistics?.summaryDetail?.dividendYield.fmt
-                ? state.statistics?.summaryDetail?.dividendYield.fmt
-                : "N/A"}
-            </p>
+            <p>{state.statistics?.summaryDetail?.dividendYield.fmt ? state.statistics?.summaryDetail?.dividendYield.fmt : "N/A"}</p>
           </div>
           <div>
             <p>Trailing annual dividend rate </p>
@@ -284,11 +284,7 @@ function Statistics() {
           </div>
           <div>
             <p>5-year average dividend yield</p>
-            <p>
-              {state.statistics?.summaryDetail?.fiveYearAvgDividendYield.fmt
-                ? state.statistics?.summaryDetail?.fiveYearAvgDividendYield.fmt
-                : "N/A"}
-            </p>
+            <p>{state.statistics?.summaryDetail?.fiveYearAvgDividendYield.fmt ? state.statistics?.summaryDetail?.fiveYearAvgDividendYield.fmt : "N/A"}</p>
           </div>
           <div>
             <p>Payout ratio </p>
@@ -296,35 +292,19 @@ function Statistics() {
           </div>
           <div>
             <p>Dividend date </p>
-            <p>
-              {state.statistics?.calendarEvents?.dividendDate.fmt
-                ? state.statistics?.calendarEvents?.dividendDate.fmt
-                : "N/A"}
-            </p>
+            <p>{state.statistics?.calendarEvents?.dividendDate.fmt ? state.statistics?.calendarEvents?.dividendDate.fmt : "N/A"}</p>
           </div>
           <div>
             <p>Ex-dividend date</p>
-            <p>
-              {state.statistics?.calendarEvents?.exDividendDate.fmt
-                ? state.statistics?.calendarEvents?.exDividendDate.fmt
-                : "N/A"}
-            </p>
+            <p>{state.statistics?.calendarEvents?.exDividendDate.fmt ? state.statistics?.calendarEvents?.exDividendDate.fmt : "N/A"}</p>
           </div>
           <div>
             <p>Last split factor</p>
-            <p>
-              {state.statistics?.defaultKeyStatistics?.lastSplitFactor
-                ? state.statistics?.defaultKeyStatistics?.lastSplitFactor
-                : "N/A"}
-            </p>
+            <p>{state.statistics?.defaultKeyStatistics?.lastSplitFactor ? state.statistics?.defaultKeyStatistics?.lastSplitFactor : "N/A"}</p>
           </div>
           <div>
             <p>Last split date</p>
-            <p>
-              {state.statistics?.defaultKeyStatistics?.lastSplitDate.fmt
-                ? state.statistics?.defaultKeyStatistics?.lastSplitDate.fmt
-                : "N/A"}
-            </p>
+            <p>{state.statistics?.defaultKeyStatistics?.lastSplitDate.fmt ? state.statistics?.defaultKeyStatistics?.lastSplitDate.fmt : "N/A"}</p>
           </div>
         </div>
       </div>

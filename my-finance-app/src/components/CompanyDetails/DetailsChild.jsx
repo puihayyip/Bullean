@@ -14,19 +14,19 @@ function DetailsChild() {
     setSelectedTab(newValue);
     switch (newValue) {
       case 0:
-        goTo("/Summary");
+        goTo("Summary");
         break;
       case 1:
-        goTo("/Chart/OneDayChart");
+        goTo("Chart/OneDayChart");
         break;
       case 2:
-        goTo("/Statistics");
+        goTo("Statistics");
         break;
       case 3:
-        goTo("/HistoricalData");
+        goTo("HistoricalData");
         break;
       case 4:
-        goTo("/Financials");
+        goTo("Financials/IncomeStatement");
         break;
       default:
         return;
@@ -42,7 +42,7 @@ function DetailsChild() {
           <Tab label="Chart" />
           <Tab label="Statistics" />
           <Tab label="Historical Data" />
-          <Tab label="Financials" />
+          <Tab label="Financials" disabled />
         </Tabs>
       </Box>
       <Outlet />

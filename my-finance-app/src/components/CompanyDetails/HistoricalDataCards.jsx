@@ -38,16 +38,20 @@ export default function HistoricalDataCards({ data }) {
   return (
     <TableContainer>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Date</TableCell>
-            <TableCell>Open</TableCell>
-            <TableCell>High</TableCell>
-            <TableCell>Low</TableCell>
-            <TableCell>Close</TableCell>
-            <TableCell>Volume</TableCell>
-          </TableRow>
-        </TableHead>
+        {Object.keys(data).length === 0 ? (
+          ""
+        ) : (
+          <TableHead>
+            <TableRow>
+              <TableCell>Date</TableCell>
+              <TableCell>Open</TableCell>
+              <TableCell>High</TableCell>
+              <TableCell>Low</TableCell>
+              <TableCell>Close</TableCell>
+              <TableCell>Volume</TableCell>
+            </TableRow>
+          </TableHead>
+        )}
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.date} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>

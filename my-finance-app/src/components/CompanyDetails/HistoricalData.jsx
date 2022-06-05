@@ -6,9 +6,11 @@ import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import Button from "@mui/material/Button";
 import HistoricalDataCards from "./HistoricalDataCards";
+import LoadingScreen from "../MainComponents/LoadingScreen";
 import { data } from "jquery";
 
 function HistoricalData() {
+  const [loading, setLoading] = useState("");
   const [state, setState] = useContext(stateContext);
   const ticker = state.selectedTicker;
   const [range, setRange] = useState("1y");
@@ -32,7 +34,7 @@ function HistoricalData() {
   }, [date.endDate]);
 
   const APIKEY = process.env.REACT_APP_RAPIDAPIKEY;
-  const handleSubmit = () => {
+  const fetchData = () => {
     const options = {
       method: "GET",
       headers: {
@@ -62,7 +64,17 @@ function HistoricalData() {
         .then((response) => setState({ ...state, historicalData: response }))
         .catch((err) => console.error(err));
     }
+    setLoading("ran");
   };
+
+  const handleSubmit = () => {
+    setLoading("loading");
+    fetchData();
+  };
+
+  if (loading === "loading") {
+    return <LoadingScreen />;
+  }
 
   return (
     <>

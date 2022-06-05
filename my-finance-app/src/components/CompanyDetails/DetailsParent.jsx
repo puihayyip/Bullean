@@ -4,12 +4,12 @@ import { FaCaretRight } from "react-icons/fa";
 import DetailsChild from "./DetailsChild";
 import $ from "jquery";
 import { stateContext } from "../../App";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function Details({ ticker }) {
   const [state, setState] = useContext(stateContext);
   const goTo = useNavigate();
-
+  const location = useLocation();
   const APIKEY = process.env.REACT_APP_APIKEY;
   const APIKEY2 = process.env.REACT_APP_APIKEY2;
   const URLOverview = `https://www.alphavantage.co/query?apikey=${APIKEY}&function=OVERVIEW&symbol=${ticker}`;
@@ -23,10 +23,7 @@ function Details({ ticker }) {
     const secondData = await secondRes.json();
 
     console.log("Fetching overview and daily");
-    if (
-      Object.keys(data).length === 1 ||
-      Object.keys(secondData).length === 1
-    ) {
+    if (Object.keys(data).length === 1 || Object.keys(secondData).length === 1) {
       alert("API calls exceeded, please wait a while before continue usage.");
     }
 
@@ -42,7 +39,7 @@ function Details({ ticker }) {
       "flex-basis": "100%",
     });
     fetchData();
-    goTo("/Summary");
+    goTo("Summary");
   };
 
   if (show) {
@@ -55,9 +52,7 @@ function Details({ ticker }) {
     <div>
       <div className={style.details__container} onClick={handleClick}>
         <h3>Details</h3>
-        <FaCaretRight
-          className={show ? style.details__btn__rotate : style.details__btn}
-        />
+        <FaCaretRight className={show ? style.details__btn__rotate : style.details__btn} />
       </div>
       <div id="DetailsComponents">
         <DetailsChild />

@@ -83,6 +83,8 @@ footer {
   justify-content: space-evenly;
   align-items: center;
   height: 3rem;
-  align-items: flex-end;
   background-color: #f4f4f4;
+  position: relative;
+  /* bottom: 0; */
+  /* width: 100%; */
 }

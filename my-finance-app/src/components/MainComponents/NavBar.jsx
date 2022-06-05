@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Route,
-  Link,
-  Routes,
-  useNavigate,
-  Outlet,
-  BrowserRouter,
-} from "react-router-dom";
+import { Route, Link, Routes, useNavigate, Outlet, BrowserRouter } from "react-router-dom";
 
 function NavBar() {
   const goTo = useNavigate();
@@ -16,7 +9,8 @@ function NavBar() {
         <div className="container">
           <div className="header">
             <a
-              href="https://www.youtube.com/watch?v=cSAp9sBzPbc&t=99s"
+              href="https://www.youtube.com/watch?v=2Ik51943WQE&t=1368s
+              "
               target="_blank"
               style={{ cursor: "not-allowed" }}
             >
