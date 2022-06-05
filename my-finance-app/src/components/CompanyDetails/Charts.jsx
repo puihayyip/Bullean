@@ -12,34 +12,34 @@ function Chart() {
     setSelectedTab(newValue);
     switch (newValue) {
       case 0:
-        goTo("/Chart/OneDayChart");
+        goTo("Chart/OneDayChart");
         break;
       case 1:
-        goTo("/Chart/FiveDayChart");
+        goTo("Chart/FiveDayChart");
         break;
       case 2:
-        goTo("/Chart/OneMonthChart");
+        goTo("Chart/OneMonthChart");
         break;
       case 3:
-        goTo("/Chart/ThreeMonthChart");
+        goTo("Chart/ThreeMonthChart");
         break;
       case 4:
-        goTo("/Chart/SixMonthChart");
+        goTo("Chart/SixMonthChart");
         break;
       case 5:
-        goTo("/Chart/YTDChart");
+        goTo("Chart/YTDChart");
         break;
       case 6:
-        goTo("/Chart/OneYearChart");
+        goTo("Chart/OneYearChart");
         break;
       case 7:
-        goTo("/Chart/TwoYearChart");
+        goTo("Chart/TwoYearChart");
         break;
       case 8:
-        goTo("/Chart/FiveYearChart");
+        goTo("Chart/FiveYearChart");
         break;
       case 9:
-        goTo("/Chart/MaxChart");
+        goTo("Chart/MaxChart");
         break;
       default:
         return;
@@ -57,12 +57,7 @@ function Chart() {
           justifyContent: "center",
         }}
       >
-        <Tabs
-          value={selectedTab}
-          onChange={handleChange}
-          textColor="secondary"
-          indicatorColor="secondary"
-        >
+        <Tabs value={selectedTab} onChange={handleChange} textColor="secondary" indicatorColor="secondary">
           <Tab label="1D" />
           <Tab label="5D" />
           <Tab label="1M" />
