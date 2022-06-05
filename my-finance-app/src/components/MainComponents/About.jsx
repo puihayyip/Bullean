@@ -13,6 +13,8 @@ function About() {
         aspernatur reiciendis fugit iusto!
       </p>
       <br />
+      <p>APIs from Alpha Vantage, IEX Cloud and YH finance were used.</p>
+      <br />
       <hr />
       <br />
       <h1>Creator</h1>
