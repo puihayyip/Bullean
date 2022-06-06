@@ -58,7 +58,9 @@ function Search() {
           onChange={(e) => setSearch(e.target.value)}
           style={{ padding: "10px 10px", borderRadius: "5px", marginRight: "10px" }}
         />
-        <Button variant="outlined">Submit</Button>
+        <Button variant="outlined" onClick={(e) => handleSubmit(e)}>
+          Submit
+        </Button>
       </form>
       <br />
       <div style={{ display: "flex", gap: "2%", alignItems: "flex-start" }}>
