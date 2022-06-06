@@ -2,26 +2,9 @@ import React, { useContext, useEffect } from "react";
 import { stateContext } from "../../../App";
 import { Line } from "react-chartjs-2";
 
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-} from "chart.js";
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from "chart.js";
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-);
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 function OneDayChart() {
   const [state, setState] = useContext(stateContext);
@@ -92,11 +75,7 @@ function OneDayChart() {
     ],
   };
 
-  return intraData ? (
-    <Line options={options} data={data} style={{ width: "600px" }} />
-  ) : (
-    <p>Please press on chart and back here to reload chart</p>
-  );
+  return intraData ? <Line options={options} data={data} style={{ width: "400px" }} /> : <p>Please press on chart and back here to reload chart</p>;
 }
 
 export default OneDayChart;

@@ -9,8 +9,8 @@ function Cards({ result, setTicker, ticker }) {
 
   let innerArr = [];
   let outerArr = [];
-  if (result?.["bestMatches"].length === 0) {
-    // console.log("No related company found");
+  if (result?.["bestMatches"] === undefined) {
+    console.log("No related company found");
   } else {
     // setTicker(result?.["bestMatches"][0]["1. symbol"]);
     for (let companies of result?.["bestMatches"]) {
@@ -40,15 +40,8 @@ function Cards({ result, setTicker, ticker }) {
       }
       outerArr.push(
         <div key={Object.values(companies)?.[0]}>
-          <div
-            className={styles.card}
-            onClick={(e) => handleClick(e)}
-            id={Object.values(companies)?.[0]}
-          >
-            <div
-              className={styles.container}
-              id={Object.values(companies)?.[0]}
-            >
+          <div className={styles.card} onClick={(e) => handleClick(e)} id={Object.values(companies)?.[0]}>
+            <div className={styles.container} id={Object.values(companies)?.[0]}>
               {innerArr}
             </div>
           </div>

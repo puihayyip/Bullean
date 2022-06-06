@@ -110,6 +110,7 @@ function HistoricalData() {
                 setDate({ ...date, startDate: e.target.value });
               }}
               max={today}
+              style={{ width: "150px" }}
             />
           </div>
           <div style={{ display: "flex", justifyContent: "space-between", gap: "20px" }}>
@@ -121,6 +122,7 @@ function HistoricalData() {
               }}
               max={today}
               min={date.startDate}
+              style={{ width: "150px" }}
             />
           </div>
         </div>

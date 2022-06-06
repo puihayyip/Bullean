@@ -20,9 +20,7 @@ function Summary({ dailyShares, overview }) {
     <div className="container">
       <h1>Summary</h1>
       <div style={{ display: "flex" }}>
-        <div
-          style={{ display: "flex", gap: "30px", justifyItems: "spaceAround" }}
-        >
+        <div style={{ display: "flex", gap: "30px", justifyItems: "spaceAround" }}>
           <div>
             <p>Previous Close: </p>
             <p>Open:</p>
@@ -33,24 +31,10 @@ function Summary({ dailyShares, overview }) {
             <p>EPS (TTM)</p>
           </div>
           <div>
+            <p>{numeral(Object.values(sharesObj)?.[1]?.["4. close"]).format("(0,0.00)")}</p>
+            <p>{numeral(Object.values(sharesObj)?.[0]?.["1. open"]).format("(0,0.00)")}</p>
             <p>
-              {numeral(Object.values(sharesObj)?.[1]?.["4. close"]).format(
-                "(0,0.00)"
-              )}
-            </p>
-            <p>
-              {numeral(Object.values(sharesObj)?.[0]?.["1. open"]).format(
-                "(0,0.00)"
-              )}
-            </p>
-            <p>
-              {numeral(Object.values(sharesObj)?.[0]?.["3. low"]).format(
-                "(0,0.00)"
-              )}{" "}
-              -{" "}
-              {numeral(Object.values(sharesObj)?.[0]?.["2. high"]).format(
-                "(0,0.00)"
-              )}
+              {numeral(Object.values(sharesObj)?.[0]?.["3. low"]).format("(0,0.00)")} - {numeral(Object.values(sharesObj)?.[0]?.["2. high"]).format("(0,0.00)")}
             </p>
             <p>
               {overview["52WeekLow"]} - {overview["52WeekHigh"]}
@@ -64,7 +48,7 @@ function Summary({ dailyShares, overview }) {
           style={{
             display: "flex",
             justifyItems: "spaceAround",
-            marginLeft: "70px",
+            marginLeft: "30px",
           }}
         >
           <div>
@@ -80,14 +64,13 @@ function Summary({ dailyShares, overview }) {
             <p>{overview.TrailingPE}</p>
             <p>{overview.LatestQuarter}</p>
             <p>
-              {overview.DividendPerShare} (
-              {numeral(overview.DividendYield).format("(0.00%)")})
+              {overview.DividendPerShare} ({numeral(overview.DividendYield).format("(0.00%)")})
             </p>
             <p>{exDivDate}</p>
             <p>{overview.AnalystTargetPrice}</p>
           </div>
         </div>
-        <div style={{ marginLeft: "80px", paddingBottom: "10px" }}>
+        <div style={{ marginLeft: "30px", paddingBottom: "10px" }}>
           <OneDayChart />
         </div>
       </div>

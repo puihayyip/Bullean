@@ -42,7 +42,7 @@ function DetailsChild() {
           <Tab label="Chart" />
           <Tab label="Statistics" />
           <Tab label="Historical Data" />
-          <Tab label="Financials" disabled />
+          <Tab label="Financials" />
         </Tabs>
       </Box>
       <Outlet />

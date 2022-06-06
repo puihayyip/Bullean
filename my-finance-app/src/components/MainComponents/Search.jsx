@@ -7,7 +7,6 @@ import Button from "@mui/material/Button";
 import Cards from "./Cards";
 import LoadingScreen from "./LoadingScreen";
 import CompanyOverview from "./CompanyOverview";
-import ScrollToTopBtn from "./ScrollToTopBtn";
 
 function Search() {
   const APIKEY3 = process.env.REACT_APP_APIKEY3;
@@ -23,6 +22,7 @@ function Search() {
     const res = await fetch(url);
     const data = await res.json();
     setResult(data);
+    console.log(data);
     setLoading("ran");
   }
 
@@ -58,7 +58,7 @@ function Search() {
           onChange={(e) => setSearch(e.target.value)}
           style={{ padding: "10px 10px", borderRadius: "5px", marginRight: "10px" }}
         />
-        <Button variant="outlined" onClick={(e) => handleSubmit(e)}>
+        <Button variant="outlined" type="submit">
           Submit
         </Button>
       </form>
@@ -76,7 +76,6 @@ function Search() {
         </div>
         <CompanyOverview ticker={ticker} setTicker={setTicker} />
       </div>
-      <ScrollToTopBtn />
     </div>
   );
 }

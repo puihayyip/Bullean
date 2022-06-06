@@ -24,6 +24,7 @@ import Financials from "./components/CompanyDetails/Financials";
 import IncomeStatement from "./components/CompanyDetails/FinancialsComponents/IncomeStatement";
 import BalanceSheet from "./components/CompanyDetails/FinancialsComponents/BalanceSheet";
 import CashFlow from "./components/CompanyDetails/FinancialsComponents/CashFlow";
+import ScrollToTopBtn from "./components/MainComponents/ScrollToTopBtn";
 
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 
@@ -100,6 +101,7 @@ function App() {
             </Route>
           </Routes>
           {/* <Footer /> */}
+          <ScrollToTopBtn />
         </BrowserRouter>
       </stateContext.Provider>
     </div>
